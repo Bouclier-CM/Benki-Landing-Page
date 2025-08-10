@@ -1,0 +1,427 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 14px;
+  --background: #ffffff;
+  --foreground: oklch(0.145 0 0);
+  --card: #ffffff;
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: #0f172a;
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.95 0.0058 264.53);
+  --secondary-foreground: #0f172a;
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  --accent: #e2e8f0;
+  --accent-foreground: #0f172a;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: rgba(0, 0, 0, 0.1);
+  --input: transparent;
+  --input-background: #f8fafc;
+  --switch-background: #cbd5e1;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: oklch(0.708 0 0);
+  
+  /* Afribenki Brand Colors */
+  --afribenki-teal: #14b8a6;
+  --afribenki-deep-blue: #1e40af;
+  --afribenki-light-blue: #3b82f6;
+  --afribenki-soft-gray: #f8fafc;
+  --afribenki-dark-gray: #475569;
+  
+  --chart-1: var(--afribenki-teal);
+  --chart-2: var(--afribenki-deep-blue);
+  --chart-3: var(--afribenki-light-blue);
+  --chart-4: #10b981;
+  --chart-5: #6366f1;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: #0f172a;
+  --foreground: oklch(0.985 0 0);
+  --card: #1e293b;
+  --card-foreground: oklch(0.985 0 0);
+  --popover: #1e293b;
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: #0f172a;
+  --secondary: #334155;
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: #334155;
+  --muted-foreground: #94a3b8;
+  --accent: #334155;
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #334155;
+  --input: #334155;
+  --ring: #64748b;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  
+  /* Dark mode adjustments for brand colors */
+  --afribenki-teal: #5eead4;
+  --afribenki-deep-blue: #60a5fa;
+  --afribenki-light-blue: #93c5fd;
+  --afribenki-soft-gray: #1e293b;
+  --afribenki-dark-gray: #94a3b8;
+  
+  --chart-1: var(--afribenki-teal);
+  --chart-2: var(--afribenki-deep-blue);
+  --chart-3: var(--afribenki-light-blue);
+  --chart-4: #34d399;
+  --chart-5: #a78bfa;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  
+  /* Brand color utilities */
+  --color-afribenki-teal: var(--afribenki-teal);
+  --color-afribenki-deep-blue: var(--afribenki-deep-blue);
+  --color-afribenki-light-blue: var(--afribenki-light-blue);
+  --color-afribenki-soft-gray: var(--afribenki-soft-gray);
+  --color-afribenki-dark-gray: var(--afribenki-dark-gray);
+  
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Remove default button styles */
+  button {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-family: inherit;
+  }
+
+  /* Image optimization */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/**
+ * Base typography for pure HTML/CSS/JS implementation
+ */
+@layer base {
+  h1 {
+    font-size: 2.5rem;
+    font-weight: var(--font-weight-medium);
+    line-height: 1.2;
+    margin: 0 0 1rem 0;
+  }
+
+  h2 {
+    font-size: 2rem;
+    font-weight: var(--font-weight-medium);
+    line-height: 1.3;
+    margin: 0 0 0.75rem 0;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-medium);
+    line-height: 1.4;
+    margin: 0 0 0.5rem 0;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+    font-weight: var(--font-weight-medium);
+    line-height: 1.4;
+    margin: 0 0 0.5rem 0;
+  }
+
+  h5 {
+    font-size: 1.125rem;
+    font-weight: var(--font-weight-medium);
+    line-height: 1.4;
+    margin: 0 0 0.5rem 0;
+  }
+
+  h6 {
+    font-size: 1rem;
+    font-weight: var(--font-weight-medium);
+    line-height: 1.4;
+    margin: 0 0 0.5rem 0;
+  }
+
+  p {
+    font-size: 1rem;
+    font-weight: var(--font-weight-normal);
+    line-height: 1.6;
+    margin: 0 0 1rem 0;
+  }
+
+  a {
+    color: var(--afribenki-deep-blue);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  a:hover {
+    color: var(--afribenki-teal);
+  }
+
+  ul, ol {
+    margin: 0 0 1rem 0;
+    padding-left: 1.5rem;
+  }
+
+  li {
+    margin-bottom: 0.25rem;
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+/* Custom utilities for Afribenki brand colors */
+@layer utilities {
+  .bg-afribenki-teal { background-color: var(--afribenki-teal); }
+  .bg-afribenki-deep-blue { background-color: var(--afribenki-deep-blue); }
+  .bg-afribenki-light-blue { background-color: var(--afribenki-light-blue); }
+  .bg-afribenki-soft-gray { background-color: var(--afribenki-soft-gray); }
+  .bg-afribenki-dark-gray { background-color: var(--afribenki-dark-gray); }
+  
+  .text-afribenki-teal { color: var(--afribenki-teal); }
+  .text-afribenki-deep-blue { color: var(--afribenki-deep-blue); }
+  .text-afribenki-light-blue { color: var(--afribenki-light-blue); }
+  .text-afribenki-dark-gray { color: var(--afribenki-dark-gray); }
+  
+  .border-afribenki-teal { border-color: var(--afribenki-teal); }
+  .border-afribenki-deep-blue { border-color: var(--afribenki-deep-blue); }
+
+  /* Background patterns and gradients */
+  .bg-gradient-afribenki {
+    background: linear-gradient(135deg, var(--afribenki-teal) 0%, var(--afribenki-deep-blue) 100%);
+  }
+
+  .bg-gradient-afribenki-light {
+    background: linear-gradient(135deg, var(--afribenki-light-blue) 0%, var(--afribenki-teal) 100%);
+  }
+
+  /* Animation utilities */
+  .animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .animate-bounce {
+    animation: bounce 1s infinite;
+  }
+
+  .animate-spin {
+    animation: spin 1s linear infinite;
+  }
+
+  /* Transition utilities */
+  .transition-all {
+    transition: all 0.3s ease;
+  }
+
+  .transition-colors {
+    transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+  }
+
+  .transition-transform {
+    transition: transform 0.2s ease;
+  }
+
+  .transition-opacity {
+    transition: opacity 0.2s ease;
+  }
+
+  /* Transform utilities */
+  .scale-105 {
+    transform: scale(1.05);
+  }
+
+  .scale-110 {
+    transform: scale(1.1);
+  }
+
+  .hover\:scale-105:hover {
+    transform: scale(1.05);
+  }
+
+  .hover\:scale-110:hover {
+    transform: scale(1.1);
+  }
+
+  /* Shadow utilities */
+  .shadow-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+
+  .shadow-xl {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+
+  .shadow-2xl {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  }
+
+  .shadow-3xl {
+    box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.3);
+  }
+
+  .hover\:shadow-lg:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+
+  .hover\:shadow-xl:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+
+  .hover\:shadow-2xl:hover {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  }
+
+  .hover\:shadow-3xl:hover {
+    box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Keyframe animations */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive design helpers */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+  }
+  
+  h3 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  h3 {
+    font-size: 1.125rem;
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus improvements */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--afribenki-teal);
+  outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    color: black !important;
+    background: white !important;
+  }
+}
