@@ -26,16 +26,23 @@
   --font-weight-normal: 400;
   --ring: oklch(0.708 0 0);
   
-  /* Afribenki Brand Colors */
-  --afribenki-teal: #14b8a6;
-  --afribenki-deep-blue: #1e40af;
-  --afribenki-light-blue: #3b82f6;
-  --afribenki-soft-gray: #f8fafc;
-  --afribenki-dark-gray: #475569;
+  /* Benki Finance Brand Colors */
+  --benki-teal: #14b8a6;
+  --benki-deep-blue: #1e40af;
+  --benki-light-blue: #3b82f6;
+  --benki-soft-gray: #f8fafc;
+  --benki-dark-gray: #475569;
   
-  --chart-1: var(--afribenki-teal);
-  --chart-2: var(--afribenki-deep-blue);
-  --chart-3: var(--afribenki-light-blue);
+  /* Legacy Afribenki colors for compatibility */
+  --afribenki-teal: var(--benki-teal);
+  --afribenki-deep-blue: var(--benki-deep-blue);
+  --afribenki-light-blue: var(--benki-light-blue);
+  --afribenki-soft-gray: var(--benki-soft-gray);
+  --afribenki-dark-gray: var(--benki-dark-gray);
+  
+  --chart-1: var(--benki-teal);
+  --chart-2: var(--benki-deep-blue);
+  --chart-3: var(--benki-light-blue);
   --chart-4: #10b981;
   --chart-5: #6366f1;
   --radius: 0.5rem;
@@ -64,16 +71,23 @@
   --font-weight-medium: 500;
   --font-weight-normal: 400;
   
-  /* Dark mode adjustments for brand colors */
-  --afribenki-teal: #5eead4;
-  --afribenki-deep-blue: #60a5fa;
-  --afribenki-light-blue: #93c5fd;
-  --afribenki-soft-gray: #1e293b;
-  --afribenki-dark-gray: #94a3b8;
+  /* Dark mode adjustments for Benki brand colors */
+  --benki-teal: #5eead4;
+  --benki-deep-blue: #60a5fa;
+  --benki-light-blue: #93c5fd;
+  --benki-soft-gray: #1e293b;
+  --benki-dark-gray: #94a3b8;
   
-  --chart-1: var(--afribenki-teal);
-  --chart-2: var(--afribenki-deep-blue);
-  --chart-3: var(--afribenki-light-blue);
+  /* Legacy compatibility */
+  --afribenki-teal: var(--benki-teal);
+  --afribenki-deep-blue: var(--benki-deep-blue);
+  --afribenki-light-blue: var(--benki-light-blue);
+  --afribenki-soft-gray: var(--benki-soft-gray);
+  --afribenki-dark-gray: var(--benki-dark-gray);
+  
+  --chart-1: var(--benki-teal);
+  --chart-2: var(--benki-deep-blue);
+  --chart-3: var(--benki-light-blue);
   --chart-4: #34d399;
   --chart-5: #a78bfa;
 }
@@ -101,12 +115,19 @@
   --color-switch-background: var(--switch-background);
   --color-ring: var(--ring);
   
-  /* Brand color utilities */
-  --color-afribenki-teal: var(--afribenki-teal);
-  --color-afribenki-deep-blue: var(--afribenki-deep-blue);
-  --color-afribenki-light-blue: var(--afribenki-light-blue);
-  --color-afribenki-soft-gray: var(--afribenki-soft-gray);
-  --color-afribenki-dark-gray: var(--afribenki-dark-gray);
+  /* Benki Finance brand color utilities */
+  --color-benki-teal: var(--benki-teal);
+  --color-benki-deep-blue: var(--benki-deep-blue);
+  --color-benki-light-blue: var(--benki-light-blue);
+  --color-benki-soft-gray: var(--benki-soft-gray);
+  --color-benki-dark-gray: var(--benki-dark-gray);
+  
+  /* Legacy compatibility */
+  --color-afribenki-teal: var(--benki-teal);
+  --color-afribenki-deep-blue: var(--benki-deep-blue);
+  --color-afribenki-light-blue: var(--benki-light-blue);
+  --color-afribenki-soft-gray: var(--benki-soft-gray);
+  --color-afribenki-dark-gray: var(--benki-dark-gray);
   
   --color-chart-1: var(--chart-1);
   --color-chart-2: var(--chart-2);
@@ -154,7 +175,7 @@
 }
 
 /**
- * Base typography for pure HTML/CSS/JS implementation
+ * Base typography for Benki Finance landing page
  */
 @layer base {
   h1 {
@@ -207,13 +228,13 @@
   }
 
   a {
-    color: var(--afribenki-deep-blue);
+    color: var(--benki-deep-blue);
     text-decoration: none;
     transition: color 0.2s ease;
   }
 
   a:hover {
-    color: var(--afribenki-teal);
+    color: var(--benki-teal);
   }
 
   ul, ol {
@@ -230,29 +251,54 @@ html {
   font-size: var(--font-size);
 }
 
-/* Custom utilities for Afribenki brand colors */
+/* Custom utilities for Benki Finance brand colors */
 @layer utilities {
-  .bg-afribenki-teal { background-color: var(--afribenki-teal); }
-  .bg-afribenki-deep-blue { background-color: var(--afribenki-deep-blue); }
-  .bg-afribenki-light-blue { background-color: var(--afribenki-light-blue); }
-  .bg-afribenki-soft-gray { background-color: var(--afribenki-soft-gray); }
-  .bg-afribenki-dark-gray { background-color: var(--afribenki-dark-gray); }
+  /* Primary Benki brand utilities */
+  .bg-benki-teal { background-color: var(--benki-teal); }
+  .bg-benki-deep-blue { background-color: var(--benki-deep-blue); }
+  .bg-benki-light-blue { background-color: var(--benki-light-blue); }
+  .bg-benki-soft-gray { background-color: var(--benki-soft-gray); }
+  .bg-benki-dark-gray { background-color: var(--benki-dark-gray); }
   
-  .text-afribenki-teal { color: var(--afribenki-teal); }
-  .text-afribenki-deep-blue { color: var(--afribenki-deep-blue); }
-  .text-afribenki-light-blue { color: var(--afribenki-light-blue); }
-  .text-afribenki-dark-gray { color: var(--afribenki-dark-gray); }
+  .text-benki-teal { color: var(--benki-teal); }
+  .text-benki-deep-blue { color: var(--benki-deep-blue); }
+  .text-benki-light-blue { color: var(--benki-light-blue); }
+  .text-benki-dark-gray { color: var(--benki-dark-gray); }
   
-  .border-afribenki-teal { border-color: var(--afribenki-teal); }
-  .border-afribenki-deep-blue { border-color: var(--afribenki-deep-blue); }
+  .border-benki-teal { border-color: var(--benki-teal); }
+  .border-benki-deep-blue { border-color: var(--benki-deep-blue); }
+
+  /* Legacy compatibility utilities */
+  .bg-afribenki-teal { background-color: var(--benki-teal); }
+  .bg-afribenki-deep-blue { background-color: var(--benki-deep-blue); }
+  .bg-afribenki-light-blue { background-color: var(--benki-light-blue); }
+  .bg-afribenki-soft-gray { background-color: var(--benki-soft-gray); }
+  .bg-afribenki-dark-gray { background-color: var(--benki-dark-gray); }
+  
+  .text-afribenki-teal { color: var(--benki-teal); }
+  .text-afribenki-deep-blue { color: var(--benki-deep-blue); }
+  .text-afribenki-light-blue { color: var(--benki-light-blue); }
+  .text-afribenki-dark-gray { color: var(--benki-dark-gray); }
+  
+  .border-afribenki-teal { border-color: var(--benki-teal); }
+  .border-afribenki-deep-blue { border-color: var(--benki-deep-blue); }
 
   /* Background patterns and gradients */
+  .bg-gradient-benki {
+    background: linear-gradient(135deg, var(--benki-teal) 0%, var(--benki-deep-blue) 100%);
+  }
+
+  .bg-gradient-benki-light {
+    background: linear-gradient(135deg, var(--benki-light-blue) 0%, var(--benki-teal) 100%);
+  }
+
+  /* Legacy gradient compatibility */
   .bg-gradient-afribenki {
-    background: linear-gradient(135deg, var(--afribenki-teal) 0%, var(--afribenki-deep-blue) 100%);
+    background: linear-gradient(135deg, var(--benki-teal) 0%, var(--benki-deep-blue) 100%);
   }
 
   .bg-gradient-afribenki-light {
-    background: linear-gradient(135deg, var(--afribenki-light-blue) 0%, var(--afribenki-teal) 100%);
+    background: linear-gradient(135deg, var(--benki-light-blue) 0%, var(--benki-teal) 100%);
   }
 
   /* Animation utilities */
@@ -266,6 +312,28 @@ html {
 
   .animate-spin {
     animation: spin 1s linear infinite;
+  }
+
+  /* Chat animation specific utilities */
+  .animate-chat-message {
+    animation: chatMessageSlideIn 0.5s ease-out forwards;
+  }
+
+  .animate-typing {
+    animation: typing 1.5s infinite;
+  }
+
+  /* Floating button animations */
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-in {
+    animation-fill-mode: both;
+  }
+
+  .slide-in-from-bottom-2 {
+    animation: slideInFromBottom 0.2s ease-out;
   }
 
   /* Transition utilities */
@@ -366,6 +434,60 @@ html {
   }
 }
 
+/* Chat Animation Keyframes */
+@keyframes chatMessageSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes typing {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0.5;
+  }
+}
+
+/* Floating Button Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes slideInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Platform Selector Animation */
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
 /* Responsive design helpers */
 @media (max-width: 768px) {
   h1 {
@@ -402,6 +524,15 @@ html {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+  
+  /* Disable chat animation for users who prefer reduced motion */
+  .animate-chat-message {
+    animation: none;
+  }
+  
+  .animate-float {
+    animation: none;
+  }
 }
 
 /* Focus improvements */
@@ -410,7 +541,7 @@ a:focus-visible,
 input:focus-visible,
 textarea:focus-visible,
 select:focus-visible {
-  outline: 2px solid var(--afribenki-teal);
+  outline: 2px solid var(--benki-teal);
   outline-offset: 2px;
 }
 
@@ -425,3 +556,251 @@ select:focus-visible {
     background: white !important;
   }
 }
+
+/* Benki Finance specific styles */
+.benki-gradient-text {
+  background: linear-gradient(135deg, var(--benki-teal) 0%, var(--benki-deep-blue) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Trust indicators styling */
+.trust-badge {
+  background: linear-gradient(135deg, #10b981 0%, var(--benki-teal) 100%);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Early access modal enhancements */
+.early-access-modal {
+  backdrop-filter: blur(8px);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* WhatsApp chat styling */
+.whatsapp-preview {
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+}
+
+/* Animated chat demo specific styles */
+.chat-demo-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.chat-message-animated {
+  animation: chatMessageSlideIn 0.5s ease-out forwards;
+  opacity: 0;
+  transform: translateY(20px) scale(0.95);
+}
+
+.chat-message-animated.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Floating chat selector styles */
+.floating-chat-selector {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 50;
+}
+
+.platform-options {
+  animation: popIn 0.2s ease-out forwards;
+}
+
+.floating-main-button {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.floating-main-button:hover {
+  transform: scale(1.1);
+}
+
+.floating-main-button.active {
+  transform: rotate(45deg);
+}
+
+/* Pulse effect for floating button */
+.pulse-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  animation: pulse-ring 2s infinite;
+  opacity: 0.25;
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(1);
+    opacity: 0.25;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* Regulatory compliance styling */
+.regulatory-badge {
+  background: linear-gradient(135deg, var(--benki-deep-blue) 0%, #4f46e5 100%);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: inline-block;
+}
+
+/* Performance metrics styling */
+.performance-metric {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.performance-metric:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* FAQ styling enhancements */
+.faq-item {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+  border-color: var(--benki-teal);
+}
+
+/* Chat bubble styling improvements */
+.chat-bubble {
+  position: relative;
+  max-width: 85%;
+  padding: 0.75rem;
+  border-radius: 1rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  word-wrap: break-word;
+}
+
+.chat-bubble.user {
+  background: linear-gradient(135deg, #25d366, #128c7e);
+  color: white;
+  margin-left: auto;
+  border-bottom-right-radius: 0.25rem;
+}
+
+.chat-bubble.ai {
+  background: white;
+  color: #1f2937;
+  border-bottom-left-radius: 0.25rem;
+  border: 1px solid #e5e7eb;
+}
+
+/* Portfolio breakdown styling */
+.portfolio-breakdown {
+  background: #f9fafb;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+}
+
+.portfolio-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.25rem;
+}
+
+.portfolio-return {
+  color: #059669;
+  font-weight: 600;
+}
+
+/* Enhanced button styles */
+.btn-gradient-primary {
+  background: linear-gradient(135deg, var(--benki-teal), var(--benki-deep-blue));
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-gradient-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  opacity: 0.9;
+}
+
+/* Loading states */
+.loading-spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Smooth transitions for all interactive elements */
+button, 
+a, 
+.card, 
+.chat-message-animated {
+  transition: all 0.2s ease;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .chat-bubble.ai {
+    border: 2px solid #374151;
+  }
+  
+  .chat-bubble.user {
+    border: 2px solid #065f46;
+  }
+}
+
+/*
+  Tailwind token compatibility shim for CDN usage
+  This maps token-style utility classes (e.g., bg-background, text-foreground)
+  to your CSS variables so the page renders correctly without a Tailwind build.
+*/
+[class*="bg-background"] { background-color: var(--background) !important; }
+[class*="text-foreground"] { color: var(--foreground) !important; }
+[class*="bg-card"] { background-color: var(--card) !important; }
+[class*="text-card-foreground"] { color: var(--card-foreground) !important; }
+[class*="bg-popover"] { background-color: var(--popover) !important; }
+[class*="text-popover-foreground"] { color: var(--popover-foreground) !important; }
+[class*="text-muted-foreground"] { color: var(--muted-foreground) !important; }
+[class*="bg-muted"] { background-color: var(--muted) !important; }
+[class*="text-primary"] { color: var(--primary) !important; }
+[class*="bg-primary"] { background-color: var(--primary) !important; }
+[class*="text-secondary"] { color: var(--secondary-foreground) !important; }
+[class*="bg-secondary"] { background-color: var(--secondary) !important; }
+[class*="text-accent"] { color: var(--accent-foreground) !important; }
+[class*="bg-accent"] { background-color: var(--accent) !important; }
+[class*="border-border"] { border-color: var(--border) !important; }
+[class*="bg-input-background"] { background-color: var(--input-background) !important; }

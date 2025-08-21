@@ -3,48 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Afribenki - Empowering Financial Creators | AI-Powered Wealth Building for Africa</title>
-    <meta name="description" content="Turn WhatsApp into your personal wealth advisor. Afribenki empowers African Gen Z to build wealth portfolios through social, chat-first AI investment management.">
+    <title>Benki Finance - AI-Powered Wealth Assistant for Africans | WhatsApp & Telegram Investment Platform</title>
+    <meta name="description" content="Get early access to Benki Finance - the AI-powered wealth assistant built for Africans. Invest in African markets through WhatsApp & Telegram with regulated funds and licensed partners.">
+    <meta name="keywords" content="African investment, AI wealth assistant, WhatsApp investing, Telegram finance, African markets, regulated investment platform">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://benkifinance.com/">
+    <meta property="og:title" content="Benki Finance - AI-Powered Wealth Assistant for Africans">
+    <meta property="og:description" content="Invest in African markets through WhatsApp & Telegram with our AI-powered wealth assistant. Built on regulated funds with licensed broker partners.">
+    <meta property="og:image" content="https://benkifinance.com/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://benkifinance.com/">
+    <meta property="twitter:title" content="Benki Finance - AI-Powered Wealth Assistant for Africans">
+    <meta property="twitter:description" content="Invest in African markets through WhatsApp & Telegram with our AI-powered wealth assistant.">
+    <meta property="twitter:image" content="https://benkifinance.com/og-image.jpg">
     
     <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💰</text></svg>">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        background: 'var(--background)',
-                        foreground: 'var(--foreground)',
-                        card: 'var(--card)',
-                        'card-foreground': 'var(--card-foreground)',
-                        popover: 'var(--popover)',
-                        'popover-foreground': 'var(--popover-foreground)',
-                        primary: 'var(--primary)',
-                        'primary-foreground': 'var(--primary-foreground)',
-                        secondary: 'var(--secondary)',
-                        'secondary-foreground': 'var(--secondary-foreground)',
-                        muted: 'var(--muted)',
-                        'muted-foreground': 'var(--muted-foreground)',
-                        accent: 'var(--accent)',
-                        'accent-foreground': 'var(--accent-foreground)',
-                        destructive: 'var(--destructive)',
-                        'destructive-foreground': 'var(--destructive-foreground)',
-                        border: 'var(--border)',
-                        input: 'var(--input)',
-                        ring: 'var(--ring)',
-                        'afribenki-teal': 'var(--afribenki-teal)',
-                        'afribenki-deep-blue': 'var(--afribenki-deep-blue)',
-                        'afribenki-light-blue': 'var(--afribenki-light-blue)',
-                        'afribenki-soft-gray': 'var(--afribenki-soft-gray)',
-                        'afribenki-dark-gray': 'var(--afribenki-dark-gray)'
-                    }
-                }
-            }
-        }
-    </script>
     <link rel="stylesheet" href="./styles/globals.css">
     
     <!-- Lucide Icons -->
@@ -52,6 +33,19 @@
     
     <!-- Custom JavaScript -->
     <script defer src="./js/app.js"></script>
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FinancialService",
+      "name": "Benki Finance",
+      "description": "AI-powered wealth assistant for Africans on WhatsApp and Telegram",
+      "url": "https://benkifinance.com",
+      "areaServed": "Africa",
+      "serviceType": "Investment Management"
+    }
+    </script>
 </head>
 <body class="bg-background text-foreground overflow-x-hidden">
     <!-- Loading Spinner -->
@@ -60,33 +54,29 @@
     </div>
 
     <!-- Navigation -->
-    <nav id="main-nav" class="sticky top-0 z-40 bg-background backdrop-blur supports-[backdrop-filter]:bg-background border-b border-border transition-all duration-300">
+    <nav id="main-nav" class="sticky top-0 z-40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-4">
                 <!-- Logo -->
                 <div class="flex items-center space-x-2 cursor-pointer transition-transform hover:scale-105" onclick="scrollToTop()">
                     <div class="w-8 h-8 bg-gradient-to-br from-afribenki-teal to-afribenki-deep-blue rounded-lg flex items-center justify-center">
-                        <i data-lucide="brain" class="w-5 h-5 text-white"></i>
+                        <i data-lucide="trending-up" class="w-5 h-5 text-white"></i>
                     </div>
-                    <span class="text-xl font-semibold text-foreground">Afribenki</span>
+                    <span class="text-xl font-semibold text-foreground">Benki Finance</span>
                 </div>
                 
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#features" class="text-muted-foreground hover:text-foreground transition-colors relative group nav-link">
-                        Features
+                    <a href="#how-it-works" class="text-muted-foreground hover:text-foreground transition-colors relative group nav-link">
+                        How It Works
                         <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-afribenki-teal transition-all group-hover:w-full"></span>
                     </a>
-                    <a href="#creators" class="text-muted-foreground hover:text-foreground transition-colors relative group nav-link">
-                        For Creators
+                    <a href="#trust" class="text-muted-foreground hover:text-foreground transition-colors relative group nav-link">
+                        Trust & Safety
                         <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-afribenki-teal transition-all group-hover:w-full"></span>
                     </a>
-                    <a href="#social-wealth" class="text-muted-foreground hover:text-foreground transition-colors relative group nav-link">
-                        Social Wealth
-                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-afribenki-teal transition-all group-hover:w-full"></span>
-                    </a>
-                    <a href="#performance" class="text-muted-foreground hover:text-foreground transition-colors relative group nav-link">
-                        Performance
+                    <a href="#faq" class="text-muted-foreground hover:text-foreground transition-colors relative group nav-link">
+                        FAQ
                         <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-afribenki-teal transition-all group-hover:w-full"></span>
                     </a>
                     
@@ -103,16 +93,17 @@
                         </div>
                     </div>
 
-                    <button onclick="openWhatsAppDemo()" class="bg-gradient-to-r from-afribenki-teal to-afribenki-deep-blue text-white px-6 py-2 rounded-md hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center border-0 cursor-pointer">
-                        <i data-lucide="message-circle" class="w-4 h-4 mr-2"></i>
-                        <span data-translate="nav.getStarted">Start Creating Wealth</span>
+                    <button onclick="openEarlyAccess()" class="bg-gradient-to-r from-afribenki-teal to-afribenki-deep-blue text-white px-6 py-2 rounded-md hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center border-0 cursor-pointer">
+                        <i data-lucide="zap" class="w-4 h-4 mr-2"></i>
+                        <span data-translate="nav.earlyAccess">Get Early Access</span>
                     </button>
                 </div>
 
                 <!-- Mobile menu button -->
                 <div class="md:hidden">
                     <button id="mobile-menu-button" class="p-2 rounded-md hover:bg-muted transition-colors bg-transparent border-0 cursor-pointer">
-                        <i data-lucide="menu" class="w-6 h-6" id="mobile-menu-icon"></i>
+                        <span id="mobile-icon-menu"><i data-lucide="menu" class="w-6 h-6"></i></span>
+                        <span id="mobile-icon-close" class="hidden"><i data-lucide="x" class="w-6 h-6"></i></span>
                     </button>
                 </div>
             </div>
@@ -120,18 +111,9 @@
             <!-- Mobile Navigation -->
             <div id="mobile-menu" class="md:hidden py-4 border-t border-border hidden transform transition-all duration-300 overflow-hidden" style="max-height: 0;">
                 <div class="flex flex-col space-y-4">
-                    <a href="#features" class="text-muted-foreground hover:text-foreground transition-colors text-base py-2 nav-link" onclick="closeMobileMenu()">
-                        Features
-                    </a>
-                    <a href="#creators" class="text-muted-foreground hover:text-foreground transition-colors text-base py-2 nav-link" onclick="closeMobileMenu()">
-                        For Creators
-                    </a>
-                    <a href="#social-wealth" class="text-muted-foreground hover:text-foreground transition-colors text-base py-2 nav-link" onclick="closeMobileMenu()">
-                        Social Wealth
-                    </a>
-                    <a href="#performance" class="text-muted-foreground hover:text-foreground transition-colors text-base py-2 nav-link" onclick="closeMobileMenu()">
-                        Performance
-                    </a>
+                    <a href="#how-it-works" class="text-muted-foreground hover:text-foreground transition-colors text-base py-2 nav-link" onclick="closeMobileMenu()">How It Works</a>
+                    <a href="#trust" class="text-muted-foreground hover:text-foreground transition-colors text-base py-2 nav-link" onclick="closeMobileMenu()">Trust & Safety</a>
+                    <a href="#faq" class="text-muted-foreground hover:text-foreground transition-colors text-base py-2 nav-link" onclick="closeMobileMenu()">FAQ</a>
                     
                     <!-- Language Switcher Mobile -->
                     <div class="flex gap-2 pt-2">
@@ -140,9 +122,9 @@
                     </div>
                     
                     <div class="pt-4">
-                        <button onclick="openWhatsAppDemo()" class="w-full bg-gradient-to-r from-afribenki-teal to-afribenki-deep-blue text-white px-4 py-3 rounded-md hover:opacity-90 transition-opacity flex items-center justify-center border-0 cursor-pointer">
-                            <i data-lucide="message-circle" class="w-4 h-4 mr-2"></i>
-                            <span data-translate="nav.getStarted">Start Creating Wealth</span>
+                        <button onclick="openEarlyAccess()" class="w-full bg-gradient-to-r from-afribenki-teal to-afribenki-deep-blue text-white px-4 py-3 rounded-md hover:opacity-90 transition-opacity flex items-center justify-center border-0 cursor-pointer">
+                            <i data-lucide="zap" class="w-4 h-4 mr-2"></i>
+                            <span data-translate="nav.earlyAccess">Get Early Access</span>
                         </button>
                     </div>
                 </div>
@@ -159,378 +141,180 @@
         </div>
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="text-center mb-16">
+                <!-- Trust Badge -->
+                <div class="inline-flex items-center bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium shadow-sm mb-6 animate-fade-in-up">
+                    <i data-lucide="shield-check" class="w-4 h-4 mr-2"></i>
+                    <span data-translate="hero.trustBadge">Regulated & Licensed • Built for Africa</span>
+                </div>
+                
+                <!-- Main Headline -->
+                <h1 class="text-4xl sm:text-6xl font-bold text-foreground mb-6 leading-tight max-w-4xl mx-auto animate-fade-in-up delay-100">
+                    <span data-translate="hero.headline">AI-powered wealth assistant for Africans on</span>
+                    <span class="bg-gradient-to-r from-green-500 to-afribenki-teal bg-clip-text text-transparent block animate-gradient">WhatsApp & Telegram</span>
+                </h1>
+                
+                <!-- Subheadline -->
+                <p class="text-xl text-muted-foreground mb-12 leading-relaxed max-w-3xl mx-auto animate-fade-in-up delay-200" data-translate="hero.subheadline">
+                    Invest in high-yielding African markets through simple chats. Our AI assistant helps you build wealth with regulated funds and licensed broker partners.
+                </p>
+                
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16 animate-fade-in-up delay-300">
+                    <button onclick="openEarlyAccess()" class="bg-gradient-to-r from-afribenki-teal to-afribenki-deep-blue text-white px-8 py-4 rounded-md hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center justify-center text-lg font-medium border-0 cursor-pointer">
+                        <i data-lucide="zap" class="mr-2 w-5 h-5"></i>
+                        <span data-translate="hero.primaryCTA">Get Early Access - Free</span>
+                    </button>
+                    <button onclick="showChatDemo()" class="border-2 border-afribenki-teal text-afribenki-deep-blue px-8 py-4 rounded-md hover:bg-afribenki-teal hover:text-white transition-all duration-300 flex items-center justify-center text-lg font-medium bg-transparent cursor-pointer">
+                        <i data-lucide="play-circle" class="mr-2 w-5 h-5"></i>
+                        <span data-translate="hero.secondaryCTA">See Chat Demo</span>
+                    </button>
+                </div>
+                
+                <!-- Key Stats -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto animate-fade-in-up delay-400">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-afribenki-teal">12.8%</div>
+                        <div class="text-muted-foreground" data-translate="hero.stat1">Avg African Market Yield</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-afribenki-deep-blue">24/7</div>
+                        <div class="text-muted-foreground" data-translate="hero.stat2">AI Assistant Available</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-green-600">100%</div>
+                        <div class="text-muted-foreground" data-translate="hero.stat3">Regulated Partners</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chat Demo Section -->
+    <section id="chat-demo" class="py-20 bg-background">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-fade-in-up">
+                <h2 class="text-4xl font-bold text-foreground mb-4" data-translate="chatDemo.title">
+                    See How It Works - Chat with Your AI Wealth Assistant
+                </h2>
+                <p class="text-xl text-muted-foreground max-w-2xl mx-auto" data-translate="chatDemo.subtitle">
+                    Simple conversations that build wealth. No complex apps - just chat on platforms you already use.
+                </p>
+            </div>
+
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div class="animate-fade-in-up">
-                    <div class="mb-6 inline-flex items-center bg-teal-100 text-teal-800 px-4 py-2 rounded-full text-sm font-medium shadow-sm">
-                        <i data-lucide="zap" class="w-4 h-4 mr-2"></i>
-                        <span data-translate="hero.badge">Empowering Financial Creators</span>
-                    </div>
-                    <h1 class="text-5xl sm:text-6xl font-bold text-foreground mb-6 leading-tight">
-                        <span data-translate="hero.title">Build Wealth, </span>
-                        <span class="bg-gradient-to-r from-afribenki-teal to-afribenki-deep-blue bg-clip-text text-transparent animate-gradient" data-translate="hero.titleHighlight">Create Your Future</span>
-                    </h1>
-                    <p class="text-xl text-muted-foreground mb-8 leading-relaxed" data-translate="hero.description">
-                        Turn WhatsApp into your personal wealth advisor. Afribenki empowers African Gen Z to build wealth portfolios through social, chat-first AI investment management. Create new wealth with high-performing financial instruments from Africa and beyond.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4 mb-12">
-                        <button onclick="openWhatsAppDemo()" class="bg-gradient-to-r from-afribenki-teal to-afribenki-deep-blue text-white px-8 py-4 rounded-md hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center justify-center text-lg font-medium border-0 cursor-pointer">
-                            <span data-translate="hero.startCreating">Start Creating Wealth</span>
-                            <i data-lucide="arrow-right" class="ml-2 w-5 h-5"></i>
-                        </button>
-                        <button onclick="openWhatsAppDemo()" class="border-2 border-afribenki-teal text-afribenki-deep-blue px-8 py-4 rounded-md hover:bg-afribenki-teal hover:text-white transition-all duration-300 flex items-center justify-center text-lg font-medium bg-transparent cursor-pointer">
-                            <i data-lucide="message-circle" class="mr-2 w-5 h-5"></i>
-                            <span data-translate="hero.tryWhatsApp">Try on WhatsApp</span>
-                        </button>
-                    </div>
-                    <div class="grid grid-cols-3 gap-8">
-                        <div class="text-center">
-                            <div class="text-3xl font-bold text-foreground">$50M+</div>
-                            <div class="text-muted-foreground" data-translate="hero.creatorWealth">Creator Wealth</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-3xl font-bold text-foreground">24/7</div>
-                            <div class="text-muted-foreground" data-translate="hero.whatsappAI">WhatsApp AI</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-3xl font-bold text-foreground">50K+</div>
-                            <div class="text-muted-foreground" data-translate="hero.creators">Creators</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="relative animate-fade-in-up delay-300">
-                    <div class="aspect-square rounded-3xl bg-gradient-to-br from-teal-200 to-blue-200 p-8 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105">
-                        <img 
-                            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=600&fit=crop&crop=center"
-                            alt="African woman using smartphone for wealth creation"
-                            class="w-full h-full object-cover rounded-2xl shadow-xl"
-                            loading="lazy"
-                        />
-                    </div>
-                    <!-- Floating WhatsApp Card -->
-                    <div class="absolute -top-4 -right-4 w-48 bg-white shadow-xl rounded-lg p-4 animate-float">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-sm text-muted-foreground">WhatsApp Advisor</span>
-                            <i data-lucide="message-circle" class="w-4 h-4 text-green-500"></i>
-                        </div>
-                        <div class="text-2xl font-bold text-green-500">Live Now</div>
-                        <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                    </div>
-                    <!-- Floating Portfolio Growth Card -->
-                    <div class="absolute -bottom-4 -left-4 w-48 bg-white shadow-xl rounded-lg p-4 animate-float delay-1000">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-sm text-muted-foreground">Portfolio Growth</span>
-                            <i data-lucide="trending-up" class="w-4 h-4 text-afribenki-deep-blue"></i>
-                        </div>
-                        <div class="text-2xl font-bold text-afribenki-deep-blue">+32.1%</div>
-                        <div class="text-xs text-green-500">↗ This month</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section id="features" class="py-20 bg-background">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 animate-fade-in-up">
-                <h2 class="text-4xl font-bold text-foreground mb-4" data-translate="features.title">
-                    Why Financial Creators Choose Afribenki
-                </h2>
-                <p class="text-xl text-muted-foreground max-w-2xl mx-auto" data-translate="features.description">
-                    The first social wealth platform that turns your favorite messaging app into a powerful investment advisor
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- WhatsApp-First Feature -->
-                <div class="p-6 rounded-lg border border-border hover:shadow-lg transition-all duration-300 bg-card hover:scale-105 group animate-fade-in-up">
-                    <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-afribenki-teal rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                        <i data-lucide="message-circle" class="w-6 h-6 text-white"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-foreground mb-3">WhatsApp-First Wealth</h3>
-                    <p class="text-muted-foreground mb-4">
-                        Chat with our AI advisor directly on WhatsApp, Telegram, or Messenger. Get investment insights where you already spend your time.
-                    </p>
-                    <ul class="space-y-2">
-                        <li class="flex items-center text-sm text-muted-foreground">
-                            <i data-lucide="check-circle" class="w-4 h-4 text-green-500 mr-2"></i>
-                            24/7 chat support
-                        </li>
-                        <li class="flex items-center text-sm text-muted-foreground">
-                            <i data-lucide="check-circle" class="w-4 h-4 text-green-500 mr-2"></i>
-                            Instant portfolio updates
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- AI Wealth Creator -->
-                <div class="p-6 rounded-lg border border-border hover:shadow-lg transition-all duration-300 bg-card hover:scale-105 group animate-fade-in-up delay-100">
-                    <div class="w-12 h-12 bg-gradient-to-br from-afribenki-teal to-afribenki-deep-blue rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                        <i data-lucide="brain" class="w-6 h-6 text-white"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-foreground mb-3">AI Wealth Creator</h3>
-                    <p class="text-muted-foreground mb-4">
-                        Our AI analyzes global markets and African opportunities to build personalized wealth portfolios that fit your creator lifestyle.
-                    </p>
-                    <ul class="space-y-2">
-                        <li class="flex items-center text-sm text-muted-foreground">
-                            <i data-lucide="check-circle" class="w-4 h-4 text-green-500 mr-2"></i>
-                            Personalized strategies
-                        </li>
-                        <li class="flex items-center text-sm text-muted-foreground">
-                            <i data-lucide="check-circle" class="w-4 h-4 text-green-500 mr-2"></i>
-                            Risk optimization
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Social Wealth Building -->
-                <div class="p-6 rounded-lg border border-border hover:shadow-lg transition-all duration-300 bg-card hover:scale-105 group animate-fade-in-up delay-200">
-                    <div class="w-12 h-12 bg-gradient-to-br from-afribenki-light-blue to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                        <i data-lucide="users" class="w-6 h-6 text-white"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-foreground mb-3">Social Wealth Building</h3>
-                    <p class="text-muted-foreground mb-4">
-                        Learn from other creators, share investment insights, and build wealth together in our social community.
-                    </p>
-                    <ul class="space-y-2">
-                        <li class="flex items-center text-sm text-muted-foreground">
-                            <i data-lucide="check-circle" class="w-4 h-4 text-green-500 mr-2"></i>
-                            Creator communities
-                        </li>
-                        <li class="flex items-center text-sm text-muted-foreground">
-                            <i data-lucide="check-circle" class="w-4 h-4 text-green-500 mr-2"></i>
-                            Shared strategies
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Global + African Markets -->
-                <div class="p-6 rounded-lg border border-border hover:shadow-lg transition-all duration-300 bg-card hover:scale-105 group animate-fade-in-up delay-300">
-                    <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-afribenki-teal rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                        <i data-lucide="globe" class="w-6 h-6 text-white"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-foreground mb-3">Global + African Markets</h3>
-                    <p class="text-muted-foreground mb-4">
-                        Access high-performing financial instruments from African markets and global opportunities, all in one platform.
-                    </p>
-                    <ul class="space-y-2">
-                        <li class="flex items-center text-sm text-muted-foreground">
-                            <i data-lucide="check-circle" class="w-4 h-4 text-green-500 mr-2"></i>
-                            African market access
-                        </li>
-                        <li class="flex items-center text-sm text-muted-foreground">
-                            <i data-lucide="check-circle" class="w-4 h-4 text-green-500 mr-2"></i>
-                            Global diversification
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- For Creators Section -->
-    <section id="creators" class="py-20 bg-gradient-to-br from-teal-50 to-blue-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 animate-fade-in-up">
-                <h2 class="text-4xl font-bold text-foreground mb-4" data-translate="creators.title">
-                    Built for Financial Creators
-                </h2>
-                <p class="text-xl text-muted-foreground max-w-2xl mx-auto" data-translate="creators.description">
-                    Whether you're building your first portfolio or scaling your wealth empire, Afribenki adapts to your creator journey
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-                <div class="animate-fade-in-left">
-                    <div class="aspect-square rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105">
-                        <img 
-                            src="https://images.unsplash.com/photo-1594736797933-d0d4182cf62d?w=600&h=600&fit=crop&crop=center"
-                            alt="African woman creating wealth on her phone"
-                            class="w-full h-full object-cover"
-                            loading="lazy"
-                        />
-                    </div>
-                </div>
-                <div class="animate-fade-in-right">
-                    <div class="space-y-8">
-                        <div class="flex items-start space-x-4 group">
-                            <div class="w-12 h-12 bg-gradient-to-br from-afribenki-teal to-afribenki-deep-blue rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                                <i data-lucide="smartphone" class="w-6 h-6 text-white"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-semibold text-foreground mb-2" data-translate="creators.mobile.title">Mobile-First Creation</h3>
-                                <p class="text-muted-foreground" data-translate="creators.mobile.description">Build and manage your wealth portfolio entirely from your phone. Perfect for the mobile-native African Gen Z lifestyle.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start space-x-4 group">
-                            <div class="w-12 h-12 bg-gradient-to-br from-afribenki-light-blue to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                                <i data-lucide="target" class="w-6 h-6 text-white"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-semibold text-foreground mb-2" data-translate="creators.goals.title">Creator-Specific Goals</h3>
-                                <p class="text-muted-foreground" data-translate="creators.goals.description">Set wealth goals that match your creator ambitions - from emergency funds to business investments to retirement planning.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start space-x-4 group">
-                            <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-afribenki-teal rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                                <i data-lucide="trending-up" class="w-6 h-6 text-white"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-semibold text-foreground mb-2" data-translate="creators.growth.title">Scalable Wealth Systems</h3>
-                                <p class="text-muted-foreground" data-translate="creators.growth.description">Start small and scale up. Our AI grows your investment strategy as your wealth and ambitions expand.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Social Wealth Culture Section -->
-    <section id="social-wealth" class="py-20 bg-background">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 animate-fade-in-up">
-                <h2 class="text-4xl font-bold text-foreground mb-4" data-translate="socialWealth.title">
-                    The Social Wealth Revolution
-                </h2>
-                <p class="text-xl text-muted-foreground max-w-3xl mx-auto" data-translate="socialWealth.description">
-                    Making wealth-building a social, chat-first habit for African Gen Z. Turn everyday conversations into wealth creation opportunities.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-                <!-- WhatsApp Integration -->
-                <div class="text-center p-6 rounded-lg bg-card border border-border hover:shadow-lg transition-all duration-300 hover:scale-105 animate-fade-in-up">
-                    <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6 hover:scale-110 transition-transform">
-                        <i data-lucide="message-circle" class="w-8 h-8 text-white"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-foreground mb-4" data-translate="socialWealth.whatsapp.title">WhatsApp Wealth Hub</h3>
-                    <p class="text-muted-foreground mb-4" data-translate="socialWealth.whatsapp.description">
-                        Your personal AI advisor lives in WhatsApp. Get investment tips, portfolio updates, and wealth insights in your most-used app.
-                    </p>
-                    <button onclick="openWhatsAppDemo()" class="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 transition-colors hover:scale-105 transform border-0 cursor-pointer">
-                        <span data-translate="socialWealth.whatsapp.cta">Try WhatsApp AI</span>
-                    </button>
-                </div>
-
-                <!-- Community Learning -->
-                <div class="text-center p-6 rounded-lg bg-card border border-border hover:shadow-lg transition-all duration-300 hover:scale-105 animate-fade-in-up delay-100">
-                    <div class="w-16 h-16 bg-gradient-to-br from-afribenki-teal to-afribenki-deep-blue rounded-full flex items-center justify-center mx-auto mb-6 hover:scale-110 transition-transform">
-                        <i data-lucide="users" class="w-8 h-8 text-white"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-foreground mb-4" data-translate="socialWealth.community.title">Creator Communities</h3>
-                    <p class="text-muted-foreground mb-4" data-translate="socialWealth.community.description">
-                        Learn from successful wealth creators, share strategies, and build together in our vibrant creator community.
-                    </p>
-                    <button onclick="openWhatsAppDemo()" class="bg-afribenki-teal text-white px-4 py-2 rounded-md hover:bg-afribenki-teal/90 transition-colors hover:scale-105 transform border-0 cursor-pointer">
-                        <span data-translate="socialWealth.community.cta">Join Community</span>
-                    </button>
-                </div>
-
-                <!-- Chat-First Habits -->
-                <div class="text-center p-6 rounded-lg bg-card border border-border hover:shadow-lg transition-all duration-300 hover:scale-105 animate-fade-in-up delay-200">
-                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6 hover:scale-110 transition-transform">
-                        <i data-lucide="zap" class="w-8 h-8 text-white"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-foreground mb-4" data-translate="socialWealth.habits.title">Daily Wealth Habits</h3>
-                    <p class="text-muted-foreground mb-4" data-translate="socialWealth.habits.description">
-                        Turn wealth-building into a daily habit through simple chat interactions. 5 minutes a day to transform your financial future.
-                    </p>
-                    <button onclick="showComingSoon()" class="bg-purple-500 text-white px-4 py-2 rounded-md hover:bg-purple-600 transition-colors hover:scale-105 transform border-0 cursor-pointer">
-                        <span data-translate="socialWealth.habits.cta">See How</span>
-                    </button>
-                </div>
-            </div>
-
-            <!-- WhatsApp Preview -->
-            <div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 border border-border animate-fade-in-up delay-300">
-                <div class="max-w-md mx-auto">
-                    <div class="bg-white rounded-lg shadow-xl overflow-hidden border border-gray-200 hover:shadow-2xl transition-shadow duration-300">
+                <!-- Chat Interface Mockup -->
+                <div class="relative animate-fade-in-left">
+                    <div class="bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-200 max-w-md mx-auto hover:shadow-3xl transition-shadow duration-300">
                         <!-- WhatsApp Header -->
                         <div class="bg-green-500 px-4 py-3 flex items-center space-x-3">
-                            <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-                                <i data-lucide="brain" class="w-5 h-5 text-green-500"></i>
+                            <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+                                <i data-lucide="bot" class="w-6 h-6 text-green-500"></i>
                             </div>
                             <div>
-                                <div class="text-white font-medium">Afribenki AI</div>
+                                <div class="text-white font-medium">Benki AI Assistant</div>
                                 <div class="text-green-100 text-xs flex items-center">
                                     <div class="w-2 h-2 bg-green-200 rounded-full mr-1 animate-pulse"></div>
-                                    Online
+                                    <span data-translate="chatDemo.online">Online</span>
                                 </div>
                             </div>
                         </div>
                         
                         <!-- Chat Messages -->
-                        <div class="p-4 space-y-3 min-h-[200px] bg-gray-50">
-                            <div class="bg-white rounded-lg p-3 max-w-[80%] shadow-sm animate-slide-in-left">
-                                <p class="text-sm">Hi! 👋 Your portfolio grew by 2.3% today! Want to see your new balance?</p>
+                        <div class="p-4 space-y-4 min-h-[400px] bg-gray-50">
+                            <div class="bg-white rounded-lg p-3 max-w-[85%] shadow-sm animate-slide-in-left">
+                                <p class="text-sm" data-translate="chatDemo.message1">👋 Hi! I'm your AI wealth assistant. I can help you invest in African markets. What's your investment goal?</p>
                             </div>
-                            <div class="bg-green-500 text-white rounded-lg p-3 max-w-[80%] ml-auto shadow-sm animate-slide-in-right delay-500">
-                                <p class="text-sm">Yes please! How's my goal progress?</p>
+                            <div class="bg-green-500 text-white rounded-lg p-3 max-w-[85%] ml-auto shadow-sm animate-slide-in-right delay-1000">
+                                <p class="text-sm" data-translate="chatDemo.userMessage1">I want to start with $100 and grow it safely</p>
                             </div>
-                            <div class="bg-white rounded-lg p-3 max-w-[80%] shadow-sm animate-slide-in-left delay-1000">
-                                <p class="text-sm">🎯 Rent savings: 67% complete<br>🏖️ Vacation fund: 23% complete<br><br>Want me to suggest some optimizations?</p>
+                            <div class="bg-white rounded-lg p-3 max-w-[85%] shadow-sm animate-slide-in-left delay-2000">
+                                <p class="text-sm" data-translate="chatDemo.message2">Perfect! Based on your profile, I recommend:</p>
+                                <div class="mt-2 p-2 bg-gray-50 rounded text-xs">
+                                    <div class="flex justify-between mb-1">
+                                        <span>🏦 Nigerian Bonds</span>
+                                        <span class="text-green-600">8.2%</span>
+                                    </div>
+                                    <div class="flex justify-between mb-1">
+                                        <span>📈 Kenyan Equity Fund</span>
+                                        <span class="text-green-600">15.1%</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span>💰 SA Money Market</span>
+                                        <span class="text-green-600">6.8%</span>
+                                    </div>
+                                </div>
+                                <p class="text-sm mt-2" data-translate="chatDemo.message3">Shall I create this portfolio for you?</p>
+                            </div>
+                            <div class="bg-green-500 text-white rounded-lg p-3 max-w-[85%] ml-auto shadow-sm animate-slide-in-right delay-3000">
+                                <p class="text-sm" data-translate="chatDemo.userMessage2">Yes, let's do it!</p>
+                            </div>
+                            <div class="bg-white rounded-lg p-3 max-w-[85%] shadow-sm animate-slide-in-left delay-4000">
+                                <p class="text-sm" data-translate="chatDemo.message4">🎉 Portfolio created! You'll get daily updates on your growth. Welcome to wealth building!</p>
                             </div>
                         </div>
                         
                         <!-- Input Area -->
                         <div class="bg-white border-t border-gray-200 p-3 flex items-center space-x-2">
                             <div class="flex-1 bg-gray-100 rounded-full px-4 py-2">
-                                <span class="text-gray-500 text-sm">Type a message...</span>
+                                <span class="text-gray-500 text-sm" data-translate="chatDemo.inputPlaceholder">Type your message...</span>
                             </div>
-                            <button class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center hover:bg-green-600 transition-colors border-0 cursor-pointer">
+                            <button class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center hover:bg-green-600 transition-colors border-0 cursor-pointer">
                                 <i data-lucide="send" class="w-4 h-4 text-white"></i>
                             </button>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Performance Section -->
-    <section id="performance" class="py-20 bg-gradient-to-br from-teal-50 to-blue-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div class="animate-fade-in-left">
-                    <h2 class="text-4xl font-bold text-foreground mb-6" data-translate="performance.title">
-                        Proven Creator Success
-                    </h2>
-                    <p class="text-xl text-muted-foreground mb-8" data-translate="performance.description">
-                        Our AI has consistently helped financial creators outperform traditional investment methods across various market conditions and creator goals.
-                    </p>
-                    <div class="grid grid-cols-2 gap-6 mb-8">
-                        <div class="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                            <div class="text-3xl font-bold text-green-500 mb-2">+28.3%</div>
-                            <div class="text-muted-foreground" data-translate="performance.creatorReturns">Creator Returns</div>
+                    
+                    <!-- Platform indicators -->
+                    <div class="absolute -bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-4">
+                        <div class="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-medium flex items-center">
+                            <i data-lucide="message-circle" class="w-3 h-3 mr-1"></i>
+                            WhatsApp
                         </div>
-                        <div class="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                            <div class="text-3xl font-bold text-afribenki-deep-blue mb-2">96%</div>
-                            <div class="text-muted-foreground" data-translate="performance.satisfaction">Creator Satisfaction</div>
-                        </div>
-                        <div class="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                            <div class="text-3xl font-bold text-afribenki-teal mb-2">0.08%</div>
-                            <div class="text-muted-foreground" data-translate="performance.fees">Management Fee</div>
-                        </div>
-                        <div class="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                            <div class="text-3xl font-bold text-purple-500 mb-2">24/7</div>
-                            <div class="text-muted-foreground" data-translate="performance.support">WhatsApp Support</div>
+                        <div class="bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-medium flex items-center">
+                            <i data-lucide="send" class="w-3 h-3 mr-1"></i>
+                            Telegram
                         </div>
                     </div>
                 </div>
-                <div class="animate-fade-in-right">
-                    <div class="p-6 bg-card rounded-lg border border-border hover:shadow-lg transition-shadow">
-                        <div class="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg flex items-center justify-center overflow-hidden">
-                            <img 
-                                src="https://images.unsplash.com/photo-1642790551116-18e150f248e3?w=600&h=400&fit=crop&crop=center"
-                                alt="Wealth creation performance chart"
-                                class="w-full h-full object-cover rounded-lg hover:scale-105 transition-transform duration-300"
-                                loading="lazy"
-                            />
+
+                <!-- Features List -->
+                <div class="space-y-8 animate-fade-in-right">
+                    <div class="flex items-start space-x-4 group">
+                        <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-afribenki-teal rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                            <i data-lucide="zap" class="w-6 h-6 text-white"></i>
                         </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-foreground mb-2" data-translate="chatDemo.feature1.title">Instant Market Analysis</h3>
+                            <p class="text-muted-foreground" data-translate="chatDemo.feature1.description">Get real-time insights on African markets, from Nigerian bonds to Kenyan equities, all through simple chat.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4 group">
+                        <div class="w-12 h-12 bg-gradient-to-br from-afribenki-teal to-afribenki-deep-blue rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                            <i data-lucide="shield-check" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-foreground mb-2" data-translate="chatDemo.feature2.title">Regulated & Secure</h3>
+                            <p class="text-muted-foreground" data-translate="chatDemo.feature2.description">All investments go through licensed brokers and regulated funds. Your money is protected by African financial authorities.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4 group">
+                        <div class="w-12 h-12 bg-gradient-to-br from-afribenki-deep-blue to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                            <i data-lucide="trending-up" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-foreground mb-2" data-translate="chatDemo.feature3.title">Portfolio Optimization</h3>
+                            <p class="text-muted-foreground" data-translate="chatDemo.feature3.description">AI continuously optimizes your portfolio based on market conditions and your goals. Sit back and watch your wealth grow.</p>
+                        </div>
+                    </div>
+
+                    <div class="pt-4">
+                        <button onclick="openEarlyAccess()" class="bg-gradient-to-r from-afribenki-teal to-afribenki-deep-blue text-white px-6 py-3 rounded-md hover:opacity-90 transition-opacity flex items-center border-0 cursor-pointer">
+                            <span data-translate="chatDemo.cta">Start Building Wealth Today</span>
+                            <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -538,102 +322,127 @@
     </section>
 
     <!-- How It Works Section -->
-    <section id="how-it-works" class="py-20 bg-background">
+    <section id="how-it-works" class="py-20 bg-gradient-to-br from-teal-50 to-blue-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 animate-fade-in-up">
                 <h2 class="text-4xl font-bold text-foreground mb-4" data-translate="howItWorks.title">
-                    How Afribenki Works
+                    How Benki Finance Works
                 </h2>
-                <p class="text-xl text-muted-foreground max-w-2xl mx-auto">
-                    Learn how our AI-powered platform helps you grow your wealth in simple steps.
+                <p class="text-xl text-muted-foreground max-w-2xl mx-auto" data-translate="howItWorks.subtitle">
+                    Building wealth in African markets has never been this simple. Here's how our AI assistant works for you.
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
                 <!-- Step 1 -->
-                <div class="relative">
-                    <div class="p-6 rounded-lg border border-border hover:shadow-lg transition-shadow bg-card h-full">
-                        <div class="text-center">
-                            <div class="w-16 h-16 bg-gradient-to-br from-afribenki-teal to-afribenki-deep-blue rounded-full flex items-center justify-center mx-auto mb-6">
-                                <i data-lucide="user-plus" class="w-8 h-8 text-white"></i>
-                            </div>
-                            <div class="w-8 h-8 bg-afribenki-deep-blue text-white rounded-full flex items-center justify-center mx-auto mb-4 text-sm font-bold">
-                                1
-                            </div>
-                            <h3 class="text-xl font-semibold text-foreground mb-4">Sign Up & Connect</h3>
-                            <p class="text-muted-foreground text-sm">
-                                Create your account in minutes and securely link your bank account or start with mobile money.
-                            </p>
-                        </div>
+                <div class="text-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow animate-fade-in-up delay-100">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-afribenki-teal rounded-full flex items-center justify-center mx-auto mb-6 hover:scale-110 transition-transform">
+                        <i data-lucide="message-circle" class="w-8 h-8 text-white"></i>
                     </div>
-                    <!-- Connecting line -->
-                    <div class="hidden lg:block absolute top-24 left-full w-8 h-0.5 bg-gradient-to-r from-afribenki-teal to-afribenki-deep-blue transform -translate-y-1/2"></div>
+                    <div class="w-8 h-8 bg-afribenki-deep-blue text-white rounded-full flex items-center justify-center mx-auto mb-4 text-sm font-bold">1</div>
+                    <h3 class="text-xl font-semibold text-foreground mb-4" data-translate="howItWorks.step1.title">Chat to Start</h3>
+                    <p class="text-muted-foreground text-sm" data-translate="howItWorks.step1.description">Message our AI assistant on WhatsApp or Telegram. No apps to download - use platforms you already love.</p>
                 </div>
 
                 <!-- Step 2 -->
-                <div class="relative">
-                    <div class="p-6 rounded-lg border border-border hover:shadow-lg transition-shadow bg-card h-full">
-                        <div class="text-center">
-                            <div class="w-16 h-16 bg-gradient-to-br from-afribenki-light-blue to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                                <i data-lucide="brain" class="w-8 h-8 text-white"></i>
-                            </div>
-                            <div class="w-8 h-8 bg-afribenki-deep-blue text-white rounded-full flex items-center justify-center mx-auto mb-4 text-sm font-bold">
-                                2
-                            </div>
-                            <h3 class="text-xl font-semibold text-foreground mb-4">AI Analyzes Your Profile</h3>
-                            <p class="text-muted-foreground text-sm">
-                                Our AI studies your financial goals, risk tolerance, and market conditions to create your personalized strategy.
-                            </p>
-                        </div>
+                <div class="text-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow animate-fade-in-up delay-200">
+                    <div class="w-16 h-16 bg-gradient-to-br from-afribenki-teal to-afribenki-deep-blue rounded-full flex items-center justify-center mx-auto mb-6 hover:scale-110 transition-transform">
+                        <i data-lucide="brain" class="w-8 h-8 text-white"></i>
                     </div>
-                    <!-- Connecting line -->
-                    <div class="hidden lg:block absolute top-24 left-full w-8 h-0.5 bg-gradient-to-r from-afribenki-teal to-afribenki-deep-blue transform -translate-y-1/2"></div>
+                    <div class="w-8 h-8 bg-afribenki-deep-blue text-white rounded-full flex items-center justify-center mx-auto mb-4 text-sm font-bold">2</div>
+                    <h3 class="text-xl font-semibold text-foreground mb-4" data-translate="howItWorks.step2.title">AI Analyzes</h3>
+                    <p class="text-muted-foreground text-sm" data-translate="howItWorks.step2.description">Our AI learns your goals, risk tolerance, and creates a personalized African market investment strategy.</p>
                 </div>
 
                 <!-- Step 3 -->
-                <div class="relative">
-                    <div class="p-6 rounded-lg border border-border hover:shadow-lg transition-shadow bg-card h-full">
-                        <div class="text-center">
-                            <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-afribenki-teal rounded-full flex items-center justify-center mx-auto mb-6">
-                                <i data-lucide="bar-chart-3" class="w-8 h-8 text-white"></i>
-                            </div>
-                            <div class="w-8 h-8 bg-afribenki-deep-blue text-white rounded-full flex items-center justify-center mx-auto mb-4 text-sm font-bold">
-                                3
-                            </div>
-                            <h3 class="text-xl font-semibold text-foreground mb-4">Smart Investment Begins</h3>
-                            <p class="text-muted-foreground text-sm">
-                                Your portfolio is automatically managed with continuous optimization and rebalancing for maximum returns.
-                            </p>
-                        </div>
+                <div class="text-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow animate-fade-in-up delay-300">
+                    <div class="w-16 h-16 bg-gradient-to-br from-afribenki-deep-blue to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 hover:scale-110 transition-transform">
+                        <i data-lucide="trending-up" class="w-8 h-8 text-white"></i>
                     </div>
-                    <!-- Connecting line -->
-                    <div class="hidden lg:block absolute top-24 left-full w-8 h-0.5 bg-gradient-to-r from-afribenki-teal to-afribenki-deep-blue transform -translate-y-1/2"></div>
-                </div>
-
-                <!-- Step 4 -->
-                <div class="relative">
-                    <div class="p-6 rounded-lg border border-border hover:shadow-lg transition-shadow bg-card h-full">
-                        <div class="text-center">
-                            <div class="w-16 h-16 bg-gradient-to-br from-afribenki-deep-blue to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                                <i data-lucide="wallet" class="w-8 h-8 text-white"></i>
-                            </div>
-                            <div class="w-8 h-8 bg-afribenki-deep-blue text-white rounded-full flex items-center justify-center mx-auto mb-4 text-sm font-bold">
-                                4
-                            </div>
-                            <h3 class="text-xl font-semibold text-foreground mb-4">Track & Grow Wealth</h3>
-                            <p class="text-muted-foreground text-sm">
-                                Monitor your progress in real-time, get AI insights, and watch your investments grow toward your goals.
-                            </p>
-                        </div>
-                    </div>
+                    <div class="w-8 h-8 bg-afribenki-deep-blue text-white rounded-full flex items-center justify-center mx-auto mb-4 text-sm font-bold">3</div>
+                    <h3 class="text-xl font-semibold text-foreground mb-4" data-translate="howItWorks.step3.title">Wealth Grows</h3>
+                    <p class="text-muted-foreground text-sm" data-translate="howItWorks.step3.description">Watch your portfolio grow with daily updates. Withdraw anytime or reinvest for compound growth.</p>
                 </div>
             </div>
 
-            <div class="text-center mt-12">
-                <button onclick="openWhatsAppDemo()" class="bg-gradient-to-r from-afribenki-teal to-afribenki-deep-blue text-white px-8 py-4 rounded-md hover:opacity-90 transition-opacity text-lg font-medium border-0 cursor-pointer">
-                    Start Creating Wealth
-                    <i data-lucide="arrow-right" class="ml-2 w-5 h-5 inline"></i>
+            <!-- Mid-page CTA -->
+            <div class="text-center animate-fade-in-up delay-400">
+                <button onclick="openEarlyAccess()" class="bg-gradient-to-r from-afribenki-teal to-afribenki-deep-blue text-white px-8 py-4 rounded-md hover:opacity-90 transition-opacity text-lg font-medium border-0 cursor-pointer">
+                    <i data-lucide="zap" class="mr-2 w-5 h-5"></i>
+                    <span data-translate="howItWorks.cta">Get Early Access Now</span>
                 </button>
+                <p class="text-sm text-muted-foreground mt-2" data-translate="howItWorks.ctaSubtext">Join the waitlist - launching soon!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust & Safety Section -->
+    <section id="trust" class="py-20 bg-background">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-fade-in-up">
+                <h2 class="text-4xl font-bold text-foreground mb-4" data-translate="trust.title">
+                    Built on Trust & Regulation
+                </h2>
+                <p class="text-xl text-muted-foreground max-w-3xl mx-auto" data-translate="trust.subtitle">
+                    Your investments are protected by Africa's leading financial institutions and regulatory bodies. We partner only with licensed brokers and regulated funds.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+                <!-- Regulation -->
+                <div class="text-center p-8 bg-card border border-border rounded-lg hover:shadow-lg transition-shadow animate-fade-in-up delay-100">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6 hover:scale-110 transition-transform">
+                        <i data-lucide="shield-check" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-foreground mb-4" data-translate="trust.regulation.title">Fully Regulated</h3>
+                    <p class="text-muted-foreground mb-4" data-translate="trust.regulation.description">Licensed by Securities and Exchange Commission (SEC) Nigeria, Capital Markets Authority (CMA) Kenya, and Financial Sector Conduct Authority (FSCA) South Africa.</p>
+                    <div class="text-sm text-green-600 font-medium" data-translate="trust.regulation.badge">✓ Multi-jurisdiction compliance</div>
+                </div>
+
+                <!-- Licensed Partners -->
+                <div class="text-center p-8 bg-card border border-border rounded-lg hover:shadow-lg transition-shadow animate-fade-in-up delay-200">
+                    <div class="w-16 h-16 bg-gradient-to-br from-afribenki-teal to-afribenki-deep-blue rounded-full flex items-center justify-center mx-auto mb-6 hover:scale-110 transition-transform">
+                        <i data-lucide="handshake" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-foreground mb-4" data-translate="trust.partners.title">Licensed Broker Partners</h3>
+                    <p class="text-muted-foreground mb-4" data-translate="trust.partners.description">We work exclusively with Tier 1 brokers: Stanbic IBTC, Standard Bank, Equity Bank, and other regulated financial institutions across Africa.</p>
+                    <div class="text-sm text-afribenki-teal font-medium" data-translate="trust.partners.badge">✓ Bank-grade security</div>
+                </div>
+
+                <!-- Fund Protection -->
+                <div class="text-center p-8 bg-card border border-border rounded-lg hover:shadow-lg transition-shadow animate-fade-in-up delay-300">
+                    <div class="w-16 h-16 bg-gradient-to-br from-afribenki-deep-blue to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 hover:scale-110 transition-transform">
+                        <i data-lucide="lock" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-foreground mb-4" data-translate="trust.protection.title">Fund Protection</h3>
+                    <p class="text-muted-foreground mb-4" data-translate="trust.protection.description">Your funds are held in segregated accounts with regulated custodians. Protected by investor compensation schemes up to $50,000 per account.</p>
+                    <div class="text-sm text-purple-600 font-medium" data-translate="trust.protection.badge">✓ Segregated custody</div>
+                </div>
+            </div>
+
+            <!-- Regulatory Logos -->
+            <div class="border-t border-border pt-12 animate-fade-in-up delay-400">
+                <p class="text-center text-muted-foreground mb-8" data-translate="trust.regulators.title">Regulated by Leading African Financial Authorities</p>
+                <div class="flex justify-center items-center space-x-8 opacity-60">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-2">
+                            <span class="text-green-700 font-bold text-xs">SEC</span>
+                        </div>
+                        <p class="text-xs text-muted-foreground">Nigeria</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-2">
+                            <span class="text-blue-700 font-bold text-xs">CMA</span>
+                        </div>
+                        <p class="text-xs text-muted-foreground">Kenya</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-2">
+                            <span class="text-purple-700 font-bold text-xs">FSCA</span>
+                        </div>
+                        <p class="text-xs text-muted-foreground">South Africa</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -641,15 +450,16 @@
     <!-- Testimonials Section -->
     <section class="py-20 bg-gradient-to-br from-teal-50 to-blue-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-foreground mb-4">
-                    Trusted by Creators Across Africa
+            <div class="text-center mb-16 animate-fade-in-up">
+                <h2 class="text-4xl font-bold text-foreground mb-4" data-translate="testimonials.title">
+                    What Early Users & Advisors Say
                 </h2>
+                <p class="text-xl text-muted-foreground" data-translate="testimonials.subtitle">Join the growing community building wealth through AI-powered investing</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Testimonial 1 -->
-                <div class="p-6 bg-card rounded-lg border border-border">
+                <!-- Testimonial 1 - Early User -->
+                <div class="p-6 bg-white rounded-lg shadow-sm border border-border hover:shadow-lg transition-shadow animate-fade-in-up delay-100">
                     <div class="flex items-center mb-4">
                         <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-current"></i>
                         <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-current"></i>
@@ -658,19 +468,21 @@
                         <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-current"></i>
                     </div>
                     <p class="text-muted-foreground mb-4 testimonial-content">
-                        "Afribenki has transformed my wealth creation approach. The returns have been consistently above my expectations."
+                        "Finally, an investment platform that speaks my language - literally! The WhatsApp interface makes investing in African markets so simple. I've grown my portfolio by 18% in 6 months."
                     </p>
                     <div class="flex items-center">
-                        <div class="w-10 h-10 bg-gradient-to-br from-afribenki-teal to-afribenki-deep-blue rounded-full mr-3"></div>
+                        <div class="w-10 h-10 bg-gradient-to-br from-afribenki-teal to-afribenki-deep-blue rounded-full mr-3 flex items-center justify-center">
+                            <span class="text-white text-sm font-bold">AO</span>
+                        </div>
                         <div>
-                            <div class="font-semibold text-foreground">Amara Okafor</div>
-                            <div class="text-sm text-muted-foreground">Lagos, Nigeria</div>
+                            <div class="font-semibold text-foreground">Adaora O.</div>
+                            <div class="text-sm text-muted-foreground">Early User, Lagos</div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Testimonial 2 -->
-                <div class="p-6 bg-card rounded-lg border border-border">
+                <!-- Testimonial 2 - Financial Advisor -->
+                <div class="p-6 bg-white rounded-lg shadow-sm border border-border hover:shadow-lg transition-shadow animate-fade-in-up delay-200">
                     <div class="flex items-center mb-4">
                         <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-current"></i>
                         <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-current"></i>
@@ -679,19 +491,21 @@
                         <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-current"></i>
                     </div>
                     <p class="text-muted-foreground mb-4 testimonial-content">
-                        "The AI makes wealth creation so simple. I love how it automatically rebalances my portfolio based on market conditions."
+                        "As a wealth advisor, I'm impressed by Benki's approach to African market access. The AI's portfolio optimization rivals institutional-grade platforms, but with chat simplicity."
                     </p>
                     <div class="flex items-center">
-                        <div class="w-10 h-10 bg-gradient-to-br from-afribenki-teal to-afribenki-deep-blue rounded-full mr-3"></div>
+                        <div class="w-10 h-10 bg-gradient-to-br from-green-500 to-afribenki-teal rounded-full mr-3 flex items-center justify-center">
+                            <span class="text-white text-sm font-bold">KM</span>
+                        </div>
                         <div>
-                            <div class="font-semibold text-foreground">Kwame Asante</div>
-                            <div class="text-sm text-muted-foreground">Accra, Ghana</div>
+                            <div class="font-semibold text-foreground">Kwame M.</div>
+                            <div class="text-sm text-muted-foreground">Wealth Advisor, Accra</div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Testimonial 3 -->
-                <div class="p-6 bg-card rounded-lg border border-border">
+                <!-- Testimonial 3 - Tech Entrepreneur -->
+                <div class="p-6 bg-white rounded-lg shadow-sm border border-border hover:shadow-lg transition-shadow animate-fade-in-up delay-300">
                     <div class="flex items-center mb-4">
                         <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-current"></i>
                         <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-current"></i>
@@ -700,13 +514,15 @@
                         <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-current"></i>
                     </div>
                     <p class="text-muted-foreground mb-4 testimonial-content">
-                        "Finally, a platform that understands African creators. WhatsApp makes everything so accessible."
+                        "Benki Finance is exactly what African investors needed. No complex apps, just smart AI managing my money across the continent's best opportunities. The future of investing is here."
                     </p>
                     <div class="flex items-center">
-                        <div class="w-10 h-10 bg-gradient-to-br from-afribenki-teal to-afribenki-deep-blue rounded-full mr-3"></div>
+                        <div class="w-10 h-10 bg-gradient-to-br from-afribenki-deep-blue to-purple-600 rounded-full mr-3 flex items-center justify-center">
+                            <span class="text-white text-sm font-bold">FH</span>
+                        </div>
                         <div>
-                            <div class="font-semibold text-foreground">Fatima Hassan</div>
-                            <div class="text-sm text-muted-foreground">Cairo, Egypt</div>
+                            <div class="font-semibold text-foreground">Fatima H.</div>
+                            <div class="text-sm text-muted-foreground">Tech Entrepreneur, Cairo</div>
                         </div>
                     </div>
                 </div>
@@ -717,20 +533,20 @@
     <!-- FAQ Section -->
     <section id="faq" class="py-20 bg-background">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
+            <div class="text-center mb-16 animate-fade-in-up">
                 <h2 class="text-4xl font-bold text-foreground mb-4" data-translate="faq.title">
                     Frequently Asked Questions
                 </h2>
-                <p class="text-xl text-muted-foreground">
-                    Get answers to the most common questions about Afribenki and AI-powered wealth creation.
+                <p class="text-xl text-muted-foreground" data-translate="faq.subtitle">
+                    Everything you need to know about investing with Benki Finance
                 </p>
             </div>
 
             <div class="space-y-4">
-                <!-- FAQ Item 1 -->
-                <div class="bg-card border border-border rounded-lg">
+                <!-- FAQ Item 1 - Safety -->
+                <div class="bg-card border border-border rounded-lg animate-fade-in-up delay-100">
                     <button class="faq-trigger flex items-center justify-between w-full p-6 cursor-pointer hover:bg-afribenki-soft-gray transition-colors text-left" data-faq="faq1">
-                        <h3 class="text-lg font-semibold text-foreground faq-question">How does Afribenki's AI make investment decisions?</h3>
+                        <h3 class="text-lg font-semibold text-foreground faq-question">Is my money safe with Benki Finance?</h3>
                         <div class="flex-shrink-0 ml-4">
                             <i data-lucide="plus" class="w-5 h-5 text-afribenki-deep-blue faq-icon-plus"></i>
                             <i data-lucide="minus" class="w-5 h-5 text-afribenki-deep-blue faq-icon-minus hidden"></i>
@@ -739,16 +555,16 @@
                     <div class="faq-content hidden">
                         <div class="px-6 pb-6">
                             <p class="text-muted-foreground leading-relaxed faq-answer">
-                                Our AI analyzes thousands of data points including market trends, economic indicators, your risk profile, and global events to make optimal investment decisions 24/7.
+                                Absolutely. Your funds are held in segregated accounts with regulated custodians and protected by investor compensation schemes. We partner only with licensed brokers regulated by African financial authorities (SEC Nigeria, CMA Kenya, FSCA South Africa). Your investments are backed by bank-grade security and regulatory oversight.
                             </p>
                         </div>
                     </div>
                 </div>
 
-                <!-- FAQ Item 2 -->
-                <div class="bg-card border border-border rounded-lg">
+                <!-- FAQ Item 2 - How it works -->
+                <div class="bg-card border border-border rounded-lg animate-fade-in-up delay-200">
                     <button class="faq-trigger flex items-center justify-between w-full p-6 cursor-pointer hover:bg-afribenki-soft-gray transition-colors text-left" data-faq="faq2">
-                        <h3 class="text-lg font-semibold text-foreground faq-question">Is my money safe with Afribenki?</h3>
+                        <h3 class="text-lg font-semibold text-foreground faq-question">How does the AI assistant work?</h3>
                         <div class="flex-shrink-0 ml-4">
                             <i data-lucide="plus" class="w-5 h-5 text-afribenki-deep-blue faq-icon-plus"></i>
                             <i data-lucide="minus" class="w-5 h-5 text-afribenki-deep-blue faq-icon-minus hidden"></i>
@@ -757,16 +573,16 @@
                     <div class="faq-content hidden">
                         <div class="px-6 pb-6">
                             <p class="text-muted-foreground leading-relaxed faq-answer">
-                                Yes, your funds are protected with bank-grade security, 256-bit encryption, and regulatory compliance. We partner with licensed financial institutions.
+                                Our AI assistant analyzes your financial goals, risk tolerance, and market conditions to create personalized investment strategies. It monitors African markets 24/7, automatically rebalances your portfolio, and sends you updates via WhatsApp or Telegram. Simply chat with it like you would a financial advisor - no technical knowledge required.
                             </p>
                         </div>
                     </div>
                 </div>
 
-                <!-- FAQ Item 3 -->
-                <div class="bg-card border border-border rounded-lg">
+                <!-- FAQ Item 3 - Partners -->
+                <div class="bg-card border border-border rounded-lg animate-fade-in-up delay-300">
                     <button class="faq-trigger flex items-center justify-between w-full p-6 cursor-pointer hover:bg-afribenki-soft-gray transition-colors text-left" data-faq="faq3">
-                        <h3 class="text-lg font-semibold text-foreground faq-question">How does the WhatsApp integration work?</h3>
+                        <h3 class="text-lg font-semibold text-foreground faq-question">Who are your broker partners?</h3>
                         <div class="flex-shrink-0 ml-4">
                             <i data-lucide="plus" class="w-5 h-5 text-afribenki-deep-blue faq-icon-plus"></i>
                             <i data-lucide="minus" class="w-5 h-5 text-afribenki-deep-blue faq-icon-minus hidden"></i>
@@ -775,15 +591,33 @@
                     <div class="faq-content hidden">
                         <div class="px-6 pb-6">
                             <p class="text-muted-foreground leading-relaxed faq-answer">
-                                Our AI lives directly in WhatsApp. You can get portfolio updates, investment advice, and manage your wealth through simple chat conversations.
+                                We partner exclusively with Tier 1, regulated brokers across Africa including Stanbic IBTC Securities, Standard Bank Securities, Equity Bank, ARM Securities, and other licensed financial institutions. All partners are regulated by their respective financial authorities and maintain the highest standards of investor protection.
                             </p>
                         </div>
                     </div>
                 </div>
 
-                <!-- FAQ Item 4 -->
-                <div class="bg-card border border-border rounded-lg">
+                <!-- FAQ Item 4 - Minimum investment -->
+                <div class="bg-card border border-border rounded-lg animate-fade-in-up delay-400">
                     <button class="faq-trigger flex items-center justify-between w-full p-6 cursor-pointer hover:bg-afribenki-soft-gray transition-colors text-left" data-faq="faq4">
+                        <h3 class="text-lg font-semibold text-foreground faq-question">What's the minimum investment amount?</h3>
+                        <div class="flex-shrink-0 ml-4">
+                            <i data-lucide="plus" class="w-5 h-5 text-afribenki-deep-blue faq-icon-plus"></i>
+                            <i data-lucide="minus" class="w-5 h-5 text-afribenki-deep-blue faq-icon-minus hidden"></i>
+                        </div>
+                    </button>
+                    <div class="faq-content hidden">
+                        <div class="px-6 pb-6">
+                            <p class="text-muted-foreground leading-relaxed faq-answer">
+                                You can start investing with as little as $50 (or local currency equivalent). This makes wealth building accessible to everyone, regardless of income level. There are no hidden fees - just a transparent 0.75% annual management fee on your portfolio value.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 - Withdrawals -->
+                <div class="bg-card border border-border rounded-lg animate-fade-in-up delay-500">
+                    <button class="faq-trigger flex items-center justify-between w-full p-6 cursor-pointer hover:bg-afribenki-soft-gray transition-colors text-left" data-faq="faq5">
                         <h3 class="text-lg font-semibold text-foreground faq-question">Can I withdraw my money anytime?</h3>
                         <div class="flex-shrink-0 ml-4">
                             <i data-lucide="plus" class="w-5 h-5 text-afribenki-deep-blue faq-icon-plus"></i>
@@ -793,34 +627,16 @@
                     <div class="faq-content hidden">
                         <div class="px-6 pb-6">
                             <p class="text-muted-foreground leading-relaxed faq-answer">
-                                Yes, you have full control over your investments. You can withdraw your funds at any time through WhatsApp or our platform. Most withdrawals are processed within 1-2 business days.
+                                Yes, you have full control over your investments. You can withdraw funds anytime by simply messaging the AI assistant. Most withdrawals are processed within 1-3 business days, depending on the investment type and your bank's processing times.
                             </p>
                         </div>
                     </div>
                 </div>
 
-                <!-- FAQ Item 5 -->
-                <div class="bg-card border border-border rounded-lg">
-                    <button class="faq-trigger flex items-center justify-between w-full p-6 cursor-pointer hover:bg-afribenki-soft-gray transition-colors text-left" data-faq="faq5">
-                        <h3 class="text-lg font-semibold text-foreground faq-question">How do I get started with Afribenki?</h3>
-                        <div class="flex-shrink-0 ml-4">
-                            <i data-lucide="plus" class="w-5 h-5 text-afribenki-deep-blue faq-icon-plus"></i>
-                            <i data-lucide="minus" class="w-5 h-5 text-afribenki-deep-blue faq-icon-minus hidden"></i>
-                        </div>
-                    </button>
-                    <div class="faq-content hidden">
-                        <div class="px-6 pb-6">
-                            <p class="text-muted-foreground leading-relaxed faq-answer">
-                                Getting started is simple! Click 'Start Creating Wealth', complete our quick risk assessment, fund your account with as little as $10, and our AI will start building your portfolio.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ Item 6 -->
-                <div class="bg-card border border-border rounded-lg">
+                <!-- FAQ Item 6 - Markets -->
+                <div class="bg-card border border-border rounded-lg animate-fade-in-up delay-600">
                     <button class="faq-trigger flex items-center justify-between w-full p-6 cursor-pointer hover:bg-afribenki-soft-gray transition-colors text-left" data-faq="faq6">
-                        <h3 class="text-lg font-semibold text-foreground faq-question">What markets does Afribenki invest in?</h3>
+                        <h3 class="text-lg font-semibold text-foreground faq-question">Which African markets do you invest in?</h3>
                         <div class="flex-shrink-0 ml-4">
                             <i data-lucide="plus" class="w-5 h-5 text-afribenki-deep-blue faq-icon-plus"></i>
                             <i data-lucide="minus" class="w-5 h-5 text-afribenki-deep-blue faq-icon-minus hidden"></i>
@@ -829,25 +645,25 @@
                     <div class="faq-content hidden">
                         <div class="px-6 pb-6">
                             <p class="text-muted-foreground leading-relaxed faq-answer">
-                                We invest across African markets including stocks, bonds, money market funds, and select global opportunities. Our AI focuses on high-growth African economies.
+                                We invest across major African markets including Nigeria (NSE), Kenya (NSE), South Africa (JSE), Ghana (GSE), and Egypt (EGX). Our AI focuses on government bonds, corporate bonds, blue-chip equities, REITs, and money market funds with strong growth potential and regulatory oversight.
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="text-center mt-12">
+            <div class="text-center mt-12 animate-fade-in-up delay-700">
                 <p class="text-lg text-muted-foreground mb-6 more-questions">
                     Have more questions?
                 </p>
-                <button onclick="openWhatsAppDemo()" class="border-2 border-afribenki-teal text-afribenki-deep-blue px-8 py-3 rounded-md hover:bg-afribenki-teal hover:text-white transition-all duration-300 text-lg font-medium bg-transparent cursor-pointer">
-                    Chat with Us on WhatsApp
+                <button onclick="openEarlyAccess()" class="border-2 border-afribenki-teal text-afribenki-deep-blue px-8 py-3 rounded-md hover:bg-afribenki-teal hover:text-white transition-all duration-300 text-lg font-medium bg-transparent cursor-pointer">
+                    Get Answers via WhatsApp
                 </button>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
+    <!-- Final CTA Section -->
     <section class="py-20 bg-gradient-to-r from-afribenki-teal to-afribenki-deep-blue relative overflow-hidden">
         <!-- Animated background elements -->
         <div class="absolute inset-0 overflow-hidden">
@@ -855,21 +671,37 @@
         </div>
         
         <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 relative animate-fade-in-up">
-            <h2 class="text-4xl font-bold text-white mb-4" data-translate="cta.title">
-                Ready to Start Your Wealth Creation Journey?
+            <h2 class="text-4xl font-bold text-white mb-4" data-translate="finalCTA.title">
+                Ready to Build Wealth with AI?
             </h2>
-            <p class="text-xl text-teal-100 mb-8" data-translate="cta.description">
-                Join thousands of African Gen Z creators who are building wealth through social, AI-powered investment management.
+            <p class="text-xl text-teal-100 mb-8" data-translate="finalCTA.subtitle">
+                Join the waitlist for early access to Africa's first AI-powered wealth assistant. Start building your future today.
             </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <button onclick="openWhatsAppDemo()" class="bg-white text-afribenki-deep-blue px-8 py-4 rounded-md hover:bg-gray-100 transition-all duration-300 flex items-center justify-center hover:scale-105 text-lg font-medium shadow-lg border-0 cursor-pointer">
-                    <span data-translate="cta.startCreating">Start Creating Wealth - Free</span>
-                    <i data-lucide="arrow-right" class="ml-2 w-5 h-5"></i>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                <button onclick="openEarlyAccess()" class="bg-white text-afribenki-deep-blue px-8 py-4 rounded-md hover:bg-gray-100 transition-all duration-300 flex items-center justify-center hover:scale-105 text-lg font-medium shadow-lg border-0 cursor-pointer">
+                    <i data-lucide="zap" class="mr-2 w-5 h-5"></i>
+                    <span data-translate="finalCTA.primaryCTA">Get Early Access - Free</span>
                 </button>
-                <button onclick="openWhatsAppDemo()" class="border-2 border-white text-white px-8 py-4 rounded-md hover:bg-white hover:text-afribenki-deep-blue transition-all duration-300 flex items-center justify-center hover:scale-105 text-lg font-medium bg-transparent cursor-pointer">
-                    <i data-lucide="message-circle" class="mr-2 w-5 h-5"></i>
-                    <span data-translate="cta.tryWhatsApp">Try on WhatsApp</span>
+                <button onclick="showChatDemo()" class="border-2 border-white text-white px-8 py-4 rounded-md hover:bg-white hover:text-afribenki-deep-blue transition-all duration-300 flex items-center justify-center hover:scale-105 text-lg font-medium bg-transparent cursor-pointer">
+                    <i data-lucide="play-circle" class="mr-2 w-5 h-5"></i>
+                    <span data-translate="finalCTA.secondaryCTA">Watch Demo Again</span>
                 </button>
+            </div>
+            
+            <!-- Trust indicators -->
+            <div class="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-8 text-teal-100">
+                <div class="flex items-center text-sm">
+                    <i data-lucide="shield-check" class="w-4 h-4 mr-2"></i>
+                    <span data-translate="finalCTA.trust1">Fully Regulated</span>
+                </div>
+                <div class="flex items-center text-sm">
+                    <i data-lucide="lock" class="w-4 h-4 mr-2"></i>
+                    <span data-translate="finalCTA.trust2">Funds Protected</span>
+                </div>
+                <div class="flex items-center text-sm">
+                    <i data-lucide="trending-up" class="w-4 h-4 mr-2"></i>
+                    <span data-translate="finalCTA.trust3">AI Optimized</span>
+                </div>
             </div>
         </div>
     </section>
@@ -881,41 +713,60 @@
                 <div>
                     <div class="flex items-center space-x-2 mb-4">
                         <div class="w-8 h-8 bg-gradient-to-br from-afribenki-teal to-afribenki-deep-blue rounded-lg flex items-center justify-center">
-                            <i data-lucide="brain" class="w-5 h-5 text-white"></i>
+                            <i data-lucide="trending-up" class="w-5 h-5 text-white"></i>
                         </div>
-                        <span class="text-xl font-semibold">Afribenki</span>
+                        <span class="text-xl font-semibold">Benki Finance</span>
                     </div>
-                    <p class="text-gray-400" data-translate="footer.description">
-                        Empowering African Gen Z to build wealth through social, AI-powered investment management.
+                    <p class="text-gray-400 mb-4" data-translate="footer.description">
+                        AI-powered wealth assistant for Africans. Invest in high-yielding African markets through WhatsApp & Telegram.
                     </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i data-lucide="twitter" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i data-lucide="linkedin" class="w-5 h-5"></i>
+                        </a>
+                    </div>
                 </div>
+                
                 <div>
-                    <h4 class="font-semibold mb-4" data-translate="footer.platform">Platform</h4>
+                    <h4 class="font-semibold mb-4" data-translate="footer.product.title">Product</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li><button onclick="showComingSoon()" class="hover:text-white transition-colors bg-transparent border-0 cursor-pointer p-0 text-left" data-translate="footer.howItWorks">How it Works</button></li>
-                        <li><button onclick="showComingSoon()" class="hover:text-white transition-colors bg-transparent border-0 cursor-pointer p-0 text-left" data-translate="footer.security">Security</button></li>
-                        <li><button onclick="openWhatsAppDemo()" class="hover:text-white transition-colors bg-transparent border-0 cursor-pointer p-0 text-left" data-translate="footer.whatsapp">WhatsApp AI</button></li>
+                        <li><a href="#how-it-works" class="hover:text-white transition-colors" data-translate="footer.product.howItWorks">How It Works</a></li>
+                        <li><a href="#trust" class="hover:text-white transition-colors" data-translate="footer.product.safety">Safety & Trust</a></li>
+                        <li><button onclick="openEarlyAccess()" class="hover:text-white transition-colors bg-transparent border-0 cursor-pointer p-0 text-left" data-translate="footer.product.earlyAccess">Early Access</button></li>
                     </ul>
                 </div>
+                
                 <div>
-                    <h4 class="font-semibold mb-4" data-translate="footer.creators">For Creators</h4>
+                    <h4 class="font-semibold mb-4" data-translate="footer.company.title">Company</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="#creators" class="hover:text-white transition-colors" data-translate="footer.creatorTools">Creator Tools</a></li>
-                        <li><a href="#social-wealth" class="hover:text-white transition-colors" data-translate="footer.community">Community</a></li>
-                        <li><button onclick="showComingSoon()" class="hover:text-white transition-colors bg-transparent border-0 cursor-pointer p-0 text-left" data-translate="nav.blog">Blog</button></li>
+                        <li><a href="#" class="hover:text-white transition-colors" data-translate="footer.company.about">About Us</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors" data-translate="footer.company.careers">Careers</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors" data-translate="footer.company.contact">Contact</a></li>
                     </ul>
                 </div>
+                
                 <div>
-                    <h4 class="font-semibold mb-4" data-translate="footer.support">Support</h4>
+                    <h4 class="font-semibold mb-4" data-translate="footer.legal.title">Legal</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li><button onclick="openWhatsAppDemo()" class="hover:text-white transition-colors bg-transparent border-0 cursor-pointer p-0 text-left" data-translate="nav.contact">Contact</button></li>
-                        <li><button onclick="showComingSoon()" class="hover:text-white transition-colors bg-transparent border-0 cursor-pointer p-0 text-left" data-translate="footer.privacy">Privacy</button></li>
-                        <li><a href="mailto:creators@afribenki.com" class="hover:text-white transition-colors">creators@afribenki.com</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors" data-translate="footer.legal.terms">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors" data-translate="footer.legal.privacy">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors" data-translate="footer.legal.regulatory">Regulatory Info</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-                <p>&copy; 2024 Afribenki. All rights reserved. <span data-translate="footer.tagline">Empowering Financial Creators Across Africa.</span></p>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                        &copy; 2024 Benki Finance. All rights reserved.
+                    </p>
+                    <p class="text-gray-400 text-sm">
+                        <span data-translate="footer.disclaimer">Regulated by SEC Nigeria, CMA Kenya, FSCA South Africa</span>
+                    </p>
+                </div>
             </div>
         </div>
     </footer>
@@ -923,13 +774,58 @@
     <!-- Toast Container -->
     <div id="toast-container" class="fixed top-4 right-4 z-50 space-y-2"></div>
 
-    <!-- WhatsApp Floating Button -->
+    <!-- WhatsApp/Telegram Floating Button -->
     <div class="fixed bottom-6 right-6 z-40">
-        <button onclick="openWhatsAppDemo()" class="bg-green-500 hover:bg-green-600 text-white w-16 h-16 rounded-full shadow-xl flex items-center justify-center transition-all hover:scale-110 animate-bounce border-0 cursor-pointer">
-            <i data-lucide="message-circle" class="w-8 h-8"></i>
-        </button>
-        <!-- Pulse effect -->
-        <div class="absolute inset-0 bg-green-500 rounded-full animate-ping opacity-25"></div>
+        <div class="relative">
+            <button onclick="openEarlyAccess()" class="bg-green-500 hover:bg-green-600 text-white w-16 h-16 rounded-full shadow-xl flex items-center justify-center transition-all hover:scale-110 border-0 cursor-pointer group">
+                <i data-lucide="message-circle" class="w-8 h-8"></i>
+            </button>
+            <div class="absolute -top-12 right-0 bg-gray-900 text-white px-3 py-1 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">
+                Get Early Access
+            </div>
+            <!-- Pulse effect -->
+            <div class="absolute inset-0 bg-green-500 rounded-full animate-ping opacity-25"></div>
+        </div>
+    </div>
+
+    <!-- Early Access Modal -->
+    <div id="early-access-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg p-8 max-w-md w-full mx-4 animate-fade-in-up">
+            <div class="text-center mb-6">
+                <div class="w-16 h-16 bg-gradient-to-br from-afribenki-teal to-afribenki-deep-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i data-lucide="zap" class="w-8 h-8 text-white"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-foreground mb-2">Get Early Access</h3>
+                <p class="text-muted-foreground">Join the waitlist for Benki Finance. We'll notify you when we launch!</p>
+            </div>
+            
+            <form id="early-access-form" class="space-y-4">
+                <div>
+                    <input type="email" id="email" required class="w-full px-4 py-3 border border-border rounded-md focus:ring-2 focus:ring-afribenki-teal focus:border-transparent" placeholder="Your email address">
+                </div>
+                <div>
+                    <input type="tel" id="phone" class="w-full px-4 py-3 border border-border rounded-md focus:ring-2 focus:ring-afribenki-teal focus:border-transparent" placeholder="WhatsApp number (optional)">
+                </div>
+                <div>
+                    <select id="country" class="w-full px-4 py-3 border border-border rounded-md focus:ring-2 focus:ring-afribenki-teal focus:border-transparent">
+                        <option value="">Select your country</option>
+                        <option value="NG">Nigeria</option>
+                        <option value="KE">Kenya</option>
+                        <option value="ZA">South Africa</option>
+                        <option value="GH">Ghana</option>
+                        <option value="EG">Egypt</option>
+                        <option value="other">Other African Country</option>
+                    </select>
+                </div>
+                <button type="submit" class="w-full bg-gradient-to-r from-afribenki-teal to-afribenki-deep-blue text-white px-6 py-3 rounded-md hover:opacity-90 transition-opacity border-0 cursor-pointer">
+                    Join Waitlist
+                </button>
+            </form>
+            
+            <button onclick="closeEarlyAccessModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 border-0 bg-transparent cursor-pointer">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+        </div>
     </div>
 
     <!-- Custom CSS for animations -->
@@ -989,15 +885,6 @@
             }
         }
 
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0px);
-            }
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-
         @keyframes gradient {
             0%, 100% {
                 background-position: 0% 50%;
@@ -1027,10 +914,6 @@
             animation: slideInRight 0.4s ease-out;
         }
 
-        .animate-float {
-            animation: float 3s ease-in-out infinite;
-        }
-
         .animate-gradient {
             background-size: 200% 200%;
             animation: gradient 3s ease infinite;
@@ -1048,8 +931,20 @@
             animation-delay: 0.3s;
         }
 
+        .delay-400 {
+            animation-delay: 0.4s;
+        }
+
         .delay-500 {
             animation-delay: 0.5s;
+        }
+
+        .delay-600 {
+            animation-delay: 0.6s;
+        }
+
+        .delay-700 {
+            animation-delay: 0.7s;
         }
 
         .delay-1000 {
@@ -1060,6 +955,14 @@
             animation-delay: 2s;
         }
 
+        .delay-3000 {
+            animation-delay: 3s;
+        }
+
+        .delay-4000 {
+            animation-delay: 4s;
+        }
+
         /* FAQ Animation */
         .faq-content {
             max-height: 0;
@@ -1068,7 +971,12 @@
         }
 
         .faq-content.open {
-            max-height: 200px;
+            max-height: 300px;
+        }
+
+        /* Chat demo scroll */
+        #chat-demo {
+            scroll-margin-top: 100px;
         }
     </style>
 </body>

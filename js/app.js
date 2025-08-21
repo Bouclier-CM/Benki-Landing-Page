@@ -1,7 +1,7 @@
-// Afribenki Landing Page - Financial Creators Platform
+// Benki Finance Landing Page - AI-Powered Wealth Assistant
 // Pure JavaScript Implementation
 
-class AfribenkiLanding {
+class BenkiFinance {
     constructor() {
         this.currentLanguage = 'en';
         this.mobileMenuOpen = false;
@@ -20,85 +20,101 @@ class AfribenkiLanding {
         this.translatePage();
         this.setupScrollAnimations();
         this.setupFAQTriggers();
+        this.setupEarlyAccessModal();
     }
 
     initializeTranslations() {
         return {
             // Navigation
-            'nav.getStarted': { en: 'Start Creating Wealth', fr: 'Commencer à créer de la richesse' },
+            'nav.earlyAccess': { en: 'Get Early Access', fr: 'Accès Anticipé' },
 
             // Hero Section
-            'hero.badge': { en: 'Empowering Financial Creators', fr: 'Autonomiser les créateurs financiers' },
-            'hero.title': { en: 'Build Wealth, ', fr: 'Construire la richesse, ' },
-            'hero.titleHighlight': { en: 'Create Your Future', fr: 'Créer votre avenir' },
-            'hero.description': { en: 'Turn WhatsApp into your personal wealth advisor. Afribenki empowers African Gen Z to build wealth portfolios through social, chat-first AI investment management. Create new wealth with high-performing financial instruments from Africa and beyond.', fr: 'Transformez WhatsApp en votre conseiller personnel en patrimoine. Afribenki permet à la Gen Z africaine de construire des portefeuilles de richesse grâce à la gestion d\'investissement IA sociale et axée sur le chat. Créez une nouvelle richesse avec des instruments financiers performants d\'Afrique et d\'ailleurs.' },
-            'hero.startCreating': { en: 'Start Creating Wealth', fr: 'Commencer à créer de la richesse' },
-            'hero.tryWhatsApp': { en: 'Try on WhatsApp', fr: 'Essayer sur WhatsApp' },
-            'hero.creatorWealth': { en: 'Creator Wealth', fr: 'Richesse des créateurs' },
-            'hero.whatsappAI': { en: 'WhatsApp AI', fr: 'WhatsApp IA' },
-            'hero.creators': { en: 'Creators', fr: 'Créateurs' },
+            'hero.trustBadge': { en: 'Regulated & Licensed • Built for Africa', fr: 'Réglementé et Agréé • Conçu pour l\'Afrique' },
+            'hero.headline': { en: 'AI-powered wealth assistant for Africans on', fr: 'Assistant de richesse IA pour les Africains sur' },
+            'hero.subheadline': { en: 'Invest in high-yielding African markets through simple chats. Our AI assistant helps you build wealth with regulated funds and licensed broker partners.', fr: 'Investissez dans les marchés africains à haut rendement grâce à des chats simples. Notre assistant IA vous aide à construire votre richesse avec des fonds réglementés et des partenaires courtiers agréés.' },
+            'hero.primaryCTA': { en: 'Get Early Access - Free', fr: 'Accès Anticipé - Gratuit' },
+            'hero.secondaryCTA': { en: 'See Chat Demo', fr: 'Voir la Démo Chat' },
+            'hero.stat1': { en: 'Avg African Market Yield', fr: 'Rendement Moyen Marché Africain' },
+            'hero.stat2': { en: 'AI Assistant Available', fr: 'Assistant IA Disponible' },
+            'hero.stat3': { en: 'Regulated Partners', fr: 'Partenaires Réglementés' },
 
-            // Features
-            'features.title': { en: 'Why Financial Creators Choose Afribenki', fr: 'Pourquoi les créateurs financiers choisissent Afribenki' },
-            'features.description': { en: 'The first social wealth platform that turns your favorite messaging app into a powerful investment advisor', fr: 'La première plateforme de richesse sociale qui transforme votre application de messagerie préférée en un puissant conseiller en investissement' },
-
-            // For Creators Section
-            'creators.title': { en: 'Built for Financial Creators', fr: 'Construit pour les créateurs financiers' },
-            'creators.description': { en: 'Whether you\'re building your first portfolio or scaling your wealth empire, Afribenki adapts to your creator journey', fr: 'Que vous construisiez votre premier portefeuille ou que vous fassiez évoluer votre empire de richesse, Afribenki s\'adapte à votre parcours de créateur' },
-            'creators.mobile.title': { en: 'Mobile-First Creation', fr: 'Création Mobile-First' },
-            'creators.mobile.description': { en: 'Build and manage your wealth portfolio entirely from your phone. Perfect for the mobile-native African Gen Z lifestyle.', fr: 'Construisez et gérez votre portefeuille de richesse entièrement depuis votre téléphone. Parfait pour le style de vie mobile natif de la Gen Z africaine.' },
-            'creators.goals.title': { en: 'Creator-Specific Goals', fr: 'Objectifs spécifiques aux créateurs' },
-            'creators.goals.description': { en: 'Set wealth goals that match your creator ambitions - from emergency funds to business investments to retirement planning.', fr: 'Définissez des objectifs de richesse qui correspondent à vos ambitions de créateur - des fonds d\'urgence aux investissements commerciaux à la planification de la retraite.' },
-            'creators.growth.title': { en: 'Scalable Wealth Systems', fr: 'Systèmes de richesse évolutifs' },
-            'creators.growth.description': { en: 'Start small and scale up. Our AI grows your investment strategy as your wealth and ambitions expand.', fr: 'Commencez petit et évoluez. Notre IA fait croître votre stratégie d\'investissement à mesure que votre richesse et vos ambitions s\'étendent.' },
-
-            // Social Wealth Section
-            'socialWealth.title': { en: 'The Social Wealth Revolution', fr: 'La révolution de la richesse sociale' },
-            'socialWealth.description': { en: 'Making wealth-building a social, chat-first habit for African Gen Z. Turn everyday conversations into wealth creation opportunities.', fr: 'Faire de la construction de richesse une habitude sociale et axée sur le chat pour la Gen Z africaine. Transformez les conversations quotidiennes en opportunités de création de richesse.' },
-            'socialWealth.whatsapp.title': { en: 'WhatsApp Wealth Hub', fr: 'Hub de richesse WhatsApp' },
-            'socialWealth.whatsapp.description': { en: 'Your personal AI advisor lives in WhatsApp. Get investment tips, portfolio updates, and wealth insights in your most-used app.', fr: 'Votre conseiller IA personnel vit dans WhatsApp. Obtenez des conseils d\'investissement, des mises à jour de portefeuille et des informations sur la richesse dans votre application la plus utilisée.' },
-            'socialWealth.whatsapp.cta': { en: 'Try WhatsApp AI', fr: 'Essayer WhatsApp IA' },
-            'socialWealth.community.title': { en: 'Creator Communities', fr: 'Communautés de créateurs' },
-            'socialWealth.community.description': { en: 'Learn from successful wealth creators, share strategies, and build together in our vibrant creator community.', fr: 'Apprenez des créateurs de richesse réussis, partagez des stratégies et construisez ensemble dans notre communauté de créateurs dynamique.' },
-            'socialWealth.community.cta': { en: 'Join Community', fr: 'Rejoindre la communauté' },
-            'socialWealth.habits.title': { en: 'Daily Wealth Habits', fr: 'Habitudes de richesse quotidiennes' },
-            'socialWealth.habits.description': { en: 'Turn wealth-building into a daily habit through simple chat interactions. 5 minutes a day to transform your financial future.', fr: 'Transformez la construction de richesse en habitude quotidienne grâce à de simples interactions de chat. 5 minutes par jour pour transformer votre avenir financier.' },
-            'socialWealth.habits.cta': { en: 'See How', fr: 'Voir comment' },
-
-            // Performance Section
-            'performance.title': { en: 'Proven Creator Success', fr: 'Succès prouvé des créateurs' },
-            'performance.description': { en: 'Our AI has consistently helped financial creators outperform traditional investment methods across various market conditions and creator goals.', fr: 'Notre IA a constamment aidé les créateurs financiers à surpasser les méthodes d\'investissement traditionnelles dans diverses conditions de marché et objectifs de créateurs.' },
-            'performance.creatorReturns': { en: 'Creator Returns', fr: 'Rendements des créateurs' },
-            'performance.satisfaction': { en: 'Creator Satisfaction', fr: 'Satisfaction des créateurs' },
-            'performance.fees': { en: 'Management Fee', fr: 'Frais de gestion' },
-            'performance.support': { en: 'WhatsApp Support', fr: 'Support WhatsApp' },
+            // Chat Demo Section
+            'chatDemo.title': { en: 'See How It Works - Chat with Your AI Wealth Assistant', fr: 'Voir Comment Ça Marche - Chattez avec Votre Assistant Richesse IA' },
+            'chatDemo.subtitle': { en: 'Simple conversations that build wealth. No complex apps - just chat on platforms you already use.', fr: 'Des conversations simples qui construisent la richesse. Pas d\'applications complexes - juste chattez sur les plateformes que vous utilisez déjà.' },
+            'chatDemo.online': { en: 'Online', fr: 'En ligne' },
+            'chatDemo.message1': { en: '👋 Hi! I\'m your AI wealth assistant. I can help you invest in African markets. What\'s your investment goal?', fr: '👋 Salut ! Je suis votre assistant richesse IA. Je peux vous aider à investir dans les marchés africains. Quel est votre objectif d\'investissement ?' },
+            'chatDemo.userMessage1': { en: 'I want to start with $100 and grow it safely', fr: 'Je veux commencer avec 100$ et le faire croître en toute sécurité' },
+            'chatDemo.message2': { en: 'Perfect! Based on your profile, I recommend:', fr: 'Parfait ! Basé sur votre profil, je recommande :' },
+            'chatDemo.message3': { en: 'Shall I create this portfolio for you?', fr: 'Dois-je créer ce portefeuille pour vous ?' },
+            'chatDemo.userMessage2': { en: 'Yes, let\'s do it!', fr: 'Oui, faisons-le !' },
+            'chatDemo.message4': { en: '🎉 Portfolio created! You\'ll get daily updates on your growth. Welcome to wealth building!', fr: '🎉 Portefeuille créé ! Vous recevrez des mises à jour quotidiennes sur votre croissance. Bienvenue dans la construction de richesse !' },
+            'chatDemo.inputPlaceholder': { en: 'Type your message...', fr: 'Tapez votre message...' },
+            'chatDemo.feature1.title': { en: 'Instant Market Analysis', fr: 'Analyse de Marché Instantanée' },
+            'chatDemo.feature1.description': { en: 'Get real-time insights on African markets, from Nigerian bonds to Kenyan equities, all through simple chat.', fr: 'Obtenez des informations en temps réel sur les marchés africains, des obligations nigérianes aux actions kényanes, le tout via un chat simple.' },
+            'chatDemo.feature2.title': { en: 'Regulated & Secure', fr: 'Réglementé et Sécurisé' },
+            'chatDemo.feature2.description': { en: 'All investments go through licensed brokers and regulated funds. Your money is protected by African financial authorities.', fr: 'Tous les investissements passent par des courtiers agréés et des fonds réglementés. Votre argent est protégé par les autorités financières africaines.' },
+            'chatDemo.feature3.title': { en: 'Portfolio Optimization', fr: 'Optimisation de Portefeuille' },
+            'chatDemo.feature3.description': { en: 'AI continuously optimizes your portfolio based on market conditions and your goals. Sit back and watch your wealth grow.', fr: 'L\'IA optimise continuellement votre portefeuille en fonction des conditions du marché et de vos objectifs. Asseyez-vous et regardez votre richesse croître.' },
+            'chatDemo.cta': { en: 'Start Building Wealth Today', fr: 'Commencez à Construire la Richesse Aujourd\'hui' },
 
             // How It Works
-            'howItWorks.title': { en: 'How Afribenki Works', fr: 'Comment fonctionne Afribenki' },
+            'howItWorks.title': { en: 'How Benki Finance Works', fr: 'Comment Fonctionne Benki Finance' },
+            'howItWorks.subtitle': { en: 'Building wealth in African markets has never been this simple. Here\'s how our AI assistant works for you.', fr: 'Construire la richesse dans les marchés africains n\'a jamais été aussi simple. Voici comment notre assistant IA fonctionne pour vous.' },
+            'howItWorks.step1.title': { en: 'Chat to Start', fr: 'Chattez pour Commencer' },
+            'howItWorks.step1.description': { en: 'Message our AI assistant on WhatsApp or Telegram. No apps to download - use platforms you already love.', fr: 'Envoyez un message à notre assistant IA sur WhatsApp ou Telegram. Pas d\'applications à télécharger - utilisez les plateformes que vous aimez déjà.' },
+            'howItWorks.step2.title': { en: 'AI Analyzes', fr: 'L\'IA Analyse' },
+            'howItWorks.step2.description': { en: 'Our AI learns your goals, risk tolerance, and creates a personalized African market investment strategy.', fr: 'Notre IA apprend vos objectifs, votre tolérance au risque et crée une stratégie d\'investissement personnalisée du marché africain.' },
+            'howItWorks.step3.title': { en: 'Wealth Grows', fr: 'La Richesse Grandit' },
+            'howItWorks.step3.description': { en: 'Watch your portfolio grow with daily updates. Withdraw anytime or reinvest for compound growth.', fr: 'Regardez votre portefeuille croître avec des mises à jour quotidiennes. Retirez à tout moment ou réinvestissez pour une croissance composée.' },
+            'howItWorks.cta': { en: 'Get Early Access Now', fr: 'Obtenir l\'Accès Anticipé Maintenant' },
+            'howItWorks.ctaSubtext': { en: 'Join the waitlist - launching soon!', fr: 'Rejoignez la liste d\'attente - lancement bientôt !' },
+
+            // Trust Section
+            'trust.title': { en: 'Built on Trust & Regulation', fr: 'Construit sur la Confiance et la Réglementation' },
+            'trust.subtitle': { en: 'Your investments are protected by Africa\'s leading financial institutions and regulatory bodies. We partner only with licensed brokers and regulated funds.', fr: 'Vos investissements sont protégés par les principales institutions financières et organismes de réglementation d\'Afrique. Nous ne nous associons qu\'avec des courtiers agréés et des fonds réglementés.' },
+            'trust.regulation.title': { en: 'Fully Regulated', fr: 'Entièrement Réglementé' },
+            'trust.regulation.description': { en: 'Licensed by Securities and Exchange Commission (SEC) Nigeria, Capital Markets Authority (CMA) Kenya, and Financial Sector Conduct Authority (FSCA) South Africa.', fr: 'Agréé par la Commission des Valeurs Mobilières et des Changes (SEC) Nigeria, l\'Autorité des Marchés de Capitaux (CMA) Kenya, et l\'Autorité de Conduite du Secteur Financier (FSCA) Afrique du Sud.' },
+            'trust.regulation.badge': { en: '✓ Multi-jurisdiction compliance', fr: '✓ Conformité multi-juridictionnelle' },
+            'trust.partners.title': { en: 'Licensed Broker Partners', fr: 'Partenaires Courtiers Agréés' },
+            'trust.partners.description': { en: 'We work exclusively with Tier 1 brokers: Stanbic IBTC, Standard Bank, Equity Bank, and other regulated financial institutions across Africa.', fr: 'Nous travaillons exclusivement avec des courtiers de niveau 1 : Stanbic IBTC, Standard Bank, Equity Bank, et d\'autres institutions financières réglementées à travers l\'Afrique.' },
+            'trust.partners.badge': { en: '✓ Bank-grade security', fr: '✓ Sécurité de niveau bancaire' },
+            'trust.protection.title': { en: 'Fund Protection', fr: 'Protection des Fonds' },
+            'trust.protection.description': { en: 'Your funds are held in segregated accounts with regulated custodians. Protected by investor compensation schemes up to $50,000 per account.', fr: 'Vos fonds sont détenus dans des comptes séparés avec des dépositaires réglementés. Protégés par des régimes de compensation des investisseurs jusqu\'à 50 000 $ par compte.' },
+            'trust.protection.badge': { en: '✓ Segregated custody', fr: '✓ Garde séparée' },
+            'trust.regulators.title': { en: 'Regulated by Leading African Financial Authorities', fr: 'Réglementé par les Principales Autorités Financières Africaines' },
+
+            // Testimonials
+            'testimonials.title': { en: 'What Early Users & Advisors Say', fr: 'Ce que Disent les Premiers Utilisateurs et Conseillers' },
+            'testimonials.subtitle': { en: 'Join the growing community building wealth through AI-powered investing', fr: 'Rejoignez la communauté croissante qui construit la richesse grâce à l\'investissement alimenté par l\'IA' },
 
             // FAQ
             'faq.title': { en: 'Frequently Asked Questions', fr: 'Questions Fréquemment Posées' },
+            'faq.subtitle': { en: 'Everything you need to know about investing with Benki Finance', fr: 'Tout ce que vous devez savoir sur l\'investissement avec Benki Finance' },
 
-            // CTA Section
-            'cta.title': { en: 'Ready to Start Your Wealth Creation Journey?', fr: 'Prêt à commencer votre parcours de création de richesse ?' },
-            'cta.description': { en: 'Join thousands of African Gen Z creators who are building wealth through social, AI-powered investment management.', fr: 'Rejoignez des milliers de créateurs de la Gen Z africaine qui construisent la richesse grâce à la gestion d\'investissement sociale alimentée par l\'IA.' },
-            'cta.startCreating': { en: 'Start Creating Wealth - Free', fr: 'Commencer à créer de la richesse - Gratuit' },
-            'cta.tryWhatsApp': { en: 'Try on WhatsApp', fr: 'Essayer sur WhatsApp' },
+            // Final CTA
+            'finalCTA.title': { en: 'Ready to Build Wealth with AI?', fr: 'Prêt à Construire la Richesse avec l\'IA ?' },
+            'finalCTA.subtitle': { en: 'Join the waitlist for early access to Africa\'s first AI-powered wealth assistant. Start building your future today.', fr: 'Rejoignez la liste d\'attente pour un accès anticipé au premier assistant de richesse alimenté par l\'IA d\'Afrique. Commencez à construire votre avenir aujourd\'hui.' },
+            'finalCTA.primaryCTA': { en: 'Get Early Access - Free', fr: 'Accès Anticipé - Gratuit' },
+            'finalCTA.secondaryCTA': { en: 'Watch Demo Again', fr: 'Regarder la Démo Encore' },
+            'finalCTA.trust1': { en: 'Fully Regulated', fr: 'Entièrement Réglementé' },
+            'finalCTA.trust2': { en: 'Funds Protected', fr: 'Fonds Protégés' },
+            'finalCTA.trust3': { en: 'AI Optimized', fr: 'Optimisé par IA' },
 
             // Footer
-            'footer.description': { en: 'Empowering African Gen Z to build wealth through social, AI-powered investment management.', fr: 'Autonomiser la Gen Z africaine pour construire la richesse grâce à la gestion d\'investissement sociale alimentée par l\'IA.' },
-            'footer.platform': { en: 'Platform', fr: 'Plateforme' },
-            'footer.howItWorks': { en: 'How it Works', fr: 'Comment ça marche' },
-            'footer.security': { en: 'Security', fr: 'Sécurité' },
-            'footer.whatsapp': { en: 'WhatsApp AI', fr: 'WhatsApp IA' },
-            'footer.creators': { en: 'For Creators', fr: 'Pour créateurs' },
-            'footer.creatorTools': { en: 'Creator Tools', fr: 'Outils créateurs' },
-            'footer.community': { en: 'Community', fr: 'Communauté' },
-            'footer.support': { en: 'Support', fr: 'Support' },
-            'footer.privacy': { en: 'Privacy', fr: 'Confidentialité' },
-            'footer.tagline': { en: 'Empowering Financial Creators Across Africa.', fr: 'Autonomiser les créateurs financiers à travers l\'Afrique.' },
-            'nav.contact': { en: 'Contact', fr: 'Contact' },
-            'nav.blog': { en: 'Blog', fr: 'Blog' }
+            'footer.description': { en: 'AI-powered wealth assistant for Africans. Invest in high-yielding African markets through WhatsApp & Telegram.', fr: 'Assistant de richesse alimenté par l\'IA pour les Africains. Investissez dans les marchés africains à haut rendement via WhatsApp et Telegram.' },
+            'footer.product.title': { en: 'Product', fr: 'Produit' },
+            'footer.product.howItWorks': { en: 'How It Works', fr: 'Comment Ça Marche' },
+            'footer.product.safety': { en: 'Safety & Trust', fr: 'Sécurité et Confiance' },
+            'footer.product.earlyAccess': { en: 'Early Access', fr: 'Accès Anticipé' },
+            'footer.company.title': { en: 'Company', fr: 'Entreprise' },
+            'footer.company.about': { en: 'About Us', fr: 'À Propos' },
+            'footer.company.careers': { en: 'Careers', fr: 'Carrières' },
+            'footer.company.contact': { en: 'Contact', fr: 'Contact' },
+            'footer.legal.title': { en: 'Legal', fr: 'Légal' },
+            'footer.legal.terms': { en: 'Terms of Service', fr: 'Conditions d\'Utilisation' },
+            'footer.legal.privacy': { en: 'Privacy Policy', fr: 'Politique de Confidentialité' },
+            'footer.legal.regulatory': { en: 'Regulatory Info', fr: 'Info Réglementaire' },
+            'footer.disclaimer': { en: 'Regulated by SEC Nigeria, CMA Kenya, FSCA South Africa', fr: 'Réglementé par SEC Nigeria, CMA Kenya, FSCA Afrique du Sud' }
         };
     }
 
@@ -119,7 +135,7 @@ class AfribenkiLanding {
         document.addEventListener('click', (e) => {
             const languageDropdown = document.getElementById('language-dropdown');
             const languageToggle = document.getElementById('language-toggle');
-            if (languageDropdown && !languageToggle.contains(e.target)) {
+            if (languageDropdown && languageToggle && !languageToggle.contains(e.target)) {
                 this.hideLanguageDropdown();
             }
         });
@@ -177,7 +193,13 @@ class AfribenkiLanding {
         // Observe elements for animations
         document.querySelectorAll('.animate-fade-in-up, .animate-fade-in-left, .animate-fade-in-right').forEach(el => {
             el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
+            if (el.classList.contains('animate-fade-in-left')) {
+                el.style.transform = 'translateX(-30px)';
+            } else if (el.classList.contains('animate-fade-in-right')) {
+                el.style.transform = 'translateX(30px)';
+            } else {
+                el.style.transform = 'translateY(30px)';
+            }
             observer.observe(el);
         });
     }
@@ -190,6 +212,24 @@ class AfribenkiLanding {
                 this.toggleFAQItem(faqId, trigger);
             });
         });
+    }
+
+    setupEarlyAccessModal() {
+        // Set up early access form
+        const form = document.getElementById('early-access-form');
+        if (form) {
+            form.addEventListener('submit', (e) => this.handleEarlyAccessSubmit(e));
+        }
+
+        // Close modal when clicking outside
+        const modal = document.getElementById('early-access-modal');
+        if (modal) {
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    this.closeEarlyAccessModal();
+                }
+            });
+        }
     }
 
     toggleFAQItem(faqId, triggerElement) {
@@ -218,7 +258,7 @@ class AfribenkiLanding {
 
     initializeLanguage() {
         // Detect user's preferred language
-        const savedLanguage = localStorage.getItem('afribenki-language');
+        const savedLanguage = localStorage.getItem('benki-language');
         const browserLanguage = navigator.language.startsWith('fr') ? 'fr' : 'en';
         this.currentLanguage = savedLanguage || browserLanguage;
         this.updateLanguageDisplay();
@@ -245,26 +285,25 @@ class AfribenkiLanding {
 
     toggleMobileMenu() {
         const mobileMenu = document.getElementById('mobile-menu');
-        const menuIcon = document.getElementById('mobile-menu-icon');
+        const iconMenu = document.getElementById('mobile-icon-menu');
+        const iconClose = document.getElementById('mobile-icon-close');
         
-        if (mobileMenu && menuIcon) {
+        if (mobileMenu) {
             this.mobileMenuOpen = !this.mobileMenuOpen;
             
             if (this.mobileMenuOpen) {
                 mobileMenu.classList.remove('hidden');
                 mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
-                menuIcon.setAttribute('data-lucide', 'x');
             } else {
                 mobileMenu.style.maxHeight = '0px';
                 setTimeout(() => {
                     mobileMenu.classList.add('hidden');
                 }, 300);
-                menuIcon.setAttribute('data-lucide', 'menu');
             }
-            
-            // Reinitialize icons
-            if (typeof lucide !== 'undefined') {
-                lucide.createIcons();
+
+            if (iconMenu && iconClose) {
+                iconMenu.classList.toggle('hidden', this.mobileMenuOpen);
+                iconClose.classList.toggle('hidden', !this.mobileMenuOpen);
             }
         }
     }
@@ -297,7 +336,7 @@ class AfribenkiLanding {
 
     changeLanguage(lang) {
         this.currentLanguage = lang;
-        localStorage.setItem('afribenki-language', lang);
+        localStorage.setItem('benki-language', lang);
         this.updateLanguageDisplay();
         this.translatePage();
         this.updateTestimonials();
@@ -349,16 +388,16 @@ class AfribenkiLanding {
     updateTestimonials() {
         const testimonials = [
             {
-                en: "Afribenki has transformed my wealth creation approach. The returns have been consistently above my expectations.",
-                fr: "Afribenki a transformé mon approche de création de richesse. Les rendements ont constamment dépassé mes attentes."
+                en: "Finally, an investment platform that speaks my language - literally! The WhatsApp interface makes investing in African markets so simple. I've grown my portfolio by 18% in 6 months.",
+                fr: "Enfin, une plateforme d'investissement qui parle ma langue - littéralement ! L'interface WhatsApp rend l'investissement dans les marchés africains si simple. J'ai fait croître mon portefeuille de 18% en 6 mois."
             },
             {
-                en: "The AI makes wealth creation so simple. I love how it automatically rebalances my portfolio based on market conditions.",
-                fr: "L'IA rend la création de richesse si simple. J'adore la façon dont elle rééquilibre automatiquement mon portefeuille."
+                en: "As a wealth advisor, I'm impressed by Benki's approach to African market access. The AI's portfolio optimization rivals institutional-grade platforms, but with chat simplicity.",
+                fr: "En tant que conseiller en patrimoine, je suis impressionné par l'approche de Benki pour l'accès aux marchés africains. L'optimisation de portefeuille de l'IA rivalise avec les plateformes de niveau institutionnel, mais avec la simplicité du chat."
             },
             {
-                en: "Finally, a platform that understands African creators. WhatsApp makes everything so accessible.",
-                fr: "Enfin, une plateforme qui comprend les créateurs africains. WhatsApp rend tout si accessible."
+                en: "Benki Finance is exactly what African investors needed. No complex apps, just smart AI managing my money across the continent's best opportunities. The future of investing is here.",
+                fr: "Benki Finance est exactement ce dont les investisseurs africains avaient besoin. Pas d'applications complexes, juste une IA intelligente gérant mon argent à travers les meilleures opportunités du continent. L'avenir de l'investissement est ici."
             }
         ];
 
@@ -373,32 +412,42 @@ class AfribenkiLanding {
         const faqs = [
             {
                 question: {
-                    en: "How does Afribenki's AI make investment decisions?",
-                    fr: "Comment l'IA d'Afribenki prend-elle des décisions d'investissement ?"
+                    en: "Is my money safe with Benki Finance?",
+                    fr: "Mon argent est-il en sécurité avec Benki Finance ?"
                 },
                 answer: {
-                    en: "Our AI analyzes thousands of data points including market trends, economic indicators, your risk profile, and global events to make optimal investment decisions 24/7.",
-                    fr: "Notre IA analyse des milliers de points de données incluant les tendances du marché, les indicateurs économiques, votre profil de risque et les événements mondiaux pour prendre des décisions d'investissement optimales 24h/24."
+                    en: "Absolutely. Your funds are held in segregated accounts with regulated custodians and protected by investor compensation schemes. We partner only with licensed brokers regulated by African financial authorities (SEC Nigeria, CMA Kenya, FSCA South Africa). Your investments are backed by bank-grade security and regulatory oversight.",
+                    fr: "Absolument. Vos fonds sont détenus dans des comptes séparés avec des dépositaires réglementés et protégés par des régimes de compensation des investisseurs. Nous ne nous associons qu'avec des courtiers agréés réglementés par les autorités financières africaines (SEC Nigeria, CMA Kenya, FSCA Afrique du Sud). Vos investissements sont soutenus par une sécurité de niveau bancaire et une surveillance réglementaire."
                 }
             },
             {
                 question: {
-                    en: "Is my money safe with Afribenki?",
-                    fr: "Mon argent est-il en sécurité avec Afribenki ?"
+                    en: "How does the AI assistant work?",
+                    fr: "Comment fonctionne l'assistant IA ?"
                 },
                 answer: {
-                    en: "Yes, your funds are protected with bank-grade security, 256-bit encryption, and regulatory compliance. We partner with licensed financial institutions.",
-                    fr: "Oui, vos fonds sont protégés avec une sécurité de niveau bancaire, un chiffrement 256 bits et la conformité réglementaire. Nous travaillons avec des institutions financières agréées."
+                    en: "Our AI assistant analyzes your financial goals, risk tolerance, and market conditions to create personalized investment strategies. It monitors African markets 24/7, automatically rebalances your portfolio, and sends you updates via WhatsApp or Telegram. Simply chat with it like you would a financial advisor - no technical knowledge required.",
+                    fr: "Notre assistant IA analyse vos objectifs financiers, votre tolérance au risque et les conditions du marché pour créer des stratégies d'investissement personnalisées. Il surveille les marchés africains 24h/24 et 7j/7, rééquilibre automatiquement votre portefeuille et vous envoie des mises à jour via WhatsApp ou Telegram. Chattez simplement avec lui comme vous le feriez avec un conseiller financier - aucune connaissance technique requise."
                 }
             },
             {
                 question: {
-                    en: "How does the WhatsApp integration work?",
-                    fr: "Comment fonctionne l'intégration WhatsApp ?"
+                    en: "Who are your broker partners?",
+                    fr: "Qui sont vos partenaires courtiers ?"
                 },
                 answer: {
-                    en: "Our AI lives directly in WhatsApp. You can get portfolio updates, investment advice, and manage your wealth through simple chat conversations.",
-                    fr: "Notre IA vit directement dans WhatsApp. Vous pouvez obtenir des mises à jour de portefeuille, des conseils d'investissement et gérer votre richesse via de simples conversations de chat."
+                    en: "We partner exclusively with Tier 1, regulated brokers across Africa including Stanbic IBTC Securities, Standard Bank Securities, Equity Bank, ARM Securities, and other licensed financial institutions. All partners are regulated by their respective financial authorities and maintain the highest standards of investor protection.",
+                    fr: "Nous nous associons exclusivement avec des courtiers de niveau 1 réglementés à travers l'Afrique, y compris Stanbic IBTC Securities, Standard Bank Securities, Equity Bank, ARM Securities, et d'autres institutions financières agréées. Tous les partenaires sont réglementés par leurs autorités financières respectives et maintiennent les plus hauts standards de protection des investisseurs."
+                }
+            },
+            {
+                question: {
+                    en: "What's the minimum investment amount?",
+                    fr: "Quel est le montant minimum d'investissement ?"
+                },
+                answer: {
+                    en: "You can start investing with as little as $50 (or local currency equivalent). This makes wealth building accessible to everyone, regardless of income level. There are no hidden fees - just a transparent 0.75% annual management fee on your portfolio value.",
+                    fr: "Vous pouvez commencer à investir avec aussi peu que 50 $ (ou l'équivalent en monnaie locale). Cela rend la construction de richesse accessible à tous, quel que soit le niveau de revenu. Il n'y a pas de frais cachés - juste des frais de gestion annuels transparents de 0,75% sur la valeur de votre portefeuille."
                 }
             },
             {
@@ -407,28 +456,18 @@ class AfribenkiLanding {
                     fr: "Puis-je retirer mon argent à tout moment ?"
                 },
                 answer: {
-                    en: "Yes, you have full control over your investments. You can withdraw your funds at any time through WhatsApp or our platform. Most withdrawals are processed within 1-2 business days.",
-                    fr: "Oui, vous avez un contrôle total sur vos investissements. Vous pouvez retirer vos fonds à tout moment via WhatsApp ou notre plateforme. La plupart des retraits sont traités dans un délai de 1 à 2 jours ouvrables."
+                    en: "Yes, you have full control over your investments. You can withdraw funds anytime by simply messaging the AI assistant. Most withdrawals are processed within 1-3 business days, depending on the investment type and your bank's processing times.",
+                    fr: "Oui, vous avez un contrôle total sur vos investissements. Vous pouvez retirer des fonds à tout moment en envoyant simplement un message à l'assistant IA. La plupart des retraits sont traités dans un délai de 1 à 3 jours ouvrables, selon le type d'investissement et les délais de traitement de votre banque."
                 }
             },
             {
                 question: {
-                    en: "How do I get started with Afribenki?",
-                    fr: "Comment commencer avec Afribenki ?"
+                    en: "Which African markets do you invest in?",
+                    fr: "Dans quels marchés africains investissez-vous ?"
                 },
                 answer: {
-                    en: "Getting started is simple! Click 'Start Creating Wealth', complete our quick risk assessment, fund your account with as little as $10, and our AI will start building your portfolio.",
-                    fr: "Commencer est simple ! Cliquez sur 'Commencer à créer de la richesse', complétez notre évaluation rapide des risques, financez votre compte avec seulement 10$, et notre IA commencera à construire votre portefeuille."
-                }
-            },
-            {
-                question: {
-                    en: "What markets does Afribenki invest in?",
-                    fr: "Dans quels marchés Afribenki investit-elle ?"
-                },
-                answer: {
-                    en: "We invest across African markets including stocks, bonds, money market funds, and select global opportunities. Our AI focuses on high-growth African economies.",
-                    fr: "Nous investissons dans les marchés africains incluant actions, obligations, fonds du marché monétaire et opportunités mondiales sélectionnées. Notre IA se concentre sur les économies africaines à forte croissance."
+                    en: "We invest across major African markets including Nigeria (NSE), Kenya (NSE), South Africa (JSE), Ghana (GSE), and Egypt (EGX). Our AI focuses on government bonds, corporate bonds, blue-chip equities, REITs, and money market funds with strong growth potential and regulatory oversight.",
+                    fr: "Nous investissons dans les principaux marchés africains, y compris le Nigeria (NSE), le Kenya (NSE), l'Afrique du Sud (JSE), le Ghana (GSE) et l'Égypte (EGX). Notre IA se concentre sur les obligations gouvernementales, les obligations d'entreprise, les actions de premier plan, les REIT et les fonds du marché monétaire avec un fort potentiel de croissance et une surveillance réglementaire."
                 }
             }
         ];
@@ -453,23 +492,72 @@ class AfribenkiLanding {
         }
     }
 
-    openWhatsAppDemo() {
-        // Open WhatsApp with pre-filled message based on language
-        const message = this.currentLanguage === 'fr' 
-            ? encodeURIComponent("Salut Afribenki ! Je suis intéressé par commencer mon parcours de création de richesse. Pouvez-vous me dire plus ?")
-            : encodeURIComponent("Hi Afribenki! I'm interested in starting my wealth creation journey. Can you tell me more?");
+    openEarlyAccess() {
+        const modal = document.getElementById('early-access-modal');
+        if (modal) {
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            // Focus on email input
+            setTimeout(() => {
+                const emailInput = document.getElementById('email');
+                if (emailInput) emailInput.focus();
+            }, 100);
+        }
+    }
+
+    closeEarlyAccessModal() {
+        const modal = document.getElementById('early-access-modal');
+        if (modal) {
+            modal.classList.add('hidden');
+            document.body.style.overflow = ''; // Restore scrolling
+        }
+    }
+
+    handleEarlyAccessSubmit(e) {
+        e.preventDefault();
         
-        // Replace with actual WhatsApp number
-        const whatsappUrl = `https://wa.me/1234567890?text=${message}`;
-        window.open(whatsappUrl, '_blank');
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const country = document.getElementById('country').value;
         
-        // Show confirmation
-        this.showToast(
-            this.currentLanguage === 'fr' 
-                ? 'Redirection vers WhatsApp...' 
-                : 'Redirecting to WhatsApp...', 
-            'info'
-        );
+        if (!email) {
+            this.showToast('Please enter your email address', 'error');
+            return;
+        }
+        
+        // Validate email format
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            this.showToast('Please enter a valid email address', 'error');
+            return;
+        }
+        
+        // Simulate API call
+        this.showToast('Adding you to the waitlist...', 'info');
+        
+        setTimeout(() => {
+            this.closeEarlyAccessModal();
+            this.showToast(
+                this.currentLanguage === 'fr' 
+                    ? 'Merci ! Vous êtes sur la liste d\'attente. Nous vous contacterons bientôt !'
+                    : 'Thank you! You\'re on the waitlist. We\'ll be in touch soon!', 
+                'success'
+            );
+            
+            // Clear form
+            document.getElementById('early-access-form').reset();
+            
+            // Store lead data (in real app, this would go to backend)
+            console.log('Early access signup:', { email, phone, country, timestamp: new Date().toISOString() });
+        }, 1500);
+    }
+
+    showChatDemo() {
+        // Scroll to demo section
+        const demoSection = document.getElementById('chat-demo');
+        if (demoSection) {
+            demoSection.scrollIntoView({ behavior: 'smooth' });
+        }
     }
 
     showToast(message, type = 'info') {
@@ -500,15 +588,6 @@ class AfribenkiLanding {
         }, 3000);
     }
 
-    showComingSoon() {
-        this.showToast(
-            this.currentLanguage === 'fr' 
-                ? 'Bientôt disponible ! Nous travaillons dur pour vous offrir la meilleure expérience créateur.'
-                : 'Coming soon! We\'re working hard to bring you the best creator experience.', 
-            'info'
-        );
-    }
-
     scrollToTop() {
         window.scrollTo({
             top: 0,
@@ -524,16 +603,20 @@ class AfribenkiLanding {
 }
 
 // Global functions for HTML event handlers
-function openWhatsAppDemo() {
-    app.openWhatsAppDemo();
+function openEarlyAccess() {
+    app.openEarlyAccess();
+}
+
+function closeEarlyAccessModal() {
+    app.closeEarlyAccessModal();
 }
 
 function changeLanguage(lang) {
     app.changeLanguage(lang);
 }
 
-function showComingSoon() {
-    app.showComingSoon();
+function showChatDemo() {
+    app.showChatDemo();
 }
 
 function scrollToTop() {
@@ -547,7 +630,7 @@ function closeMobileMenu() {
 // Initialize the app when DOM is loaded
 let app;
 document.addEventListener('DOMContentLoaded', () => {
-    app = new AfribenkiLanding();
+    app = new BenkiFinance();
 });
 
 // Add some performance optimizations
@@ -555,14 +638,24 @@ window.addEventListener('load', () => {
     // Preload critical images
     const criticalImages = [
         'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=600&fit=crop&crop=center',
-        'https://images.unsplash.com/photo-1594736797933-d0d4182cf62d?w=600&h=600&fit=crop&crop=center',
-        'https://images.unsplash.com/photo-1642790551116-18e150f248e3?w=600&h=400&fit=crop&crop=center'
+        'https://images.unsplash.com/photo-1594736797933-d0d4182cf62d?w=600&h=600&fit=crop&crop=center'
     ];
     
     criticalImages.forEach(src => {
         const img = new Image();
         img.src = src;
     });
+});
+
+// Enhanced accessibility
+document.addEventListener('keydown', (e) => {
+    // Close modal on Escape key
+    if (e.key === 'Escape') {
+        const modal = document.getElementById('early-access-modal');
+        if (modal && !modal.classList.contains('hidden')) {
+            app.closeEarlyAccessModal();
+        }
+    }
 });
 
 // Smooth scroll polyfill for older browsers
