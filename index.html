@@ -929,18 +929,18 @@
 
   <!-- WhatsApp/Telegram Floating Button -->
   <div class="fixed bottom-6 right-6 z-40">
-    <div class="relative">
-      <a href="http://t.me/afribenkibot"
-        class="bg-green-500 hover:bg-green-600 text-white w-16 h-16 rounded-full shadow-xl flex items-center justify-center transition-all hover:scale-110 border-0 cursor-pointer group"
+    <div class="relative group">
+      <a href="https://t.me/afribenkibot" target="_blank" rel="noopener"
+        class="relative z-10 bg-green-500 hover:bg-green-600 text-white w-16 h-16 rounded-full shadow-xl flex items-center justify-center transition-all hover:scale-110 border-0 cursor-pointer"
         aria-label="Chat on Telegram">
         <i data-lucide="message-circle" class="w-8 h-8"></i>
       </a>
       <div
         class="absolute -top-12 right-0 bg-gray-900 text-white px-3 py-1 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">
-        Get Early Access
+        Chat on Telegram
       </div>
       <!-- Pulse effect -->
-      <div class="absolute inset-0 bg-green-500 rounded-full animate-ping opacity-25"></div>
+      <div class="absolute inset-0 bg-green-500 rounded-full animate-ping opacity-25 pointer-events-none z-0"></div>
     </div>
   </div>
 
