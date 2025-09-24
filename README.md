@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/Screenshot 2025-09-16 191257.png" alt="AFRIBENKI - Empowering Africa's Financial Growth" height="80">
+  <img src="assets/Screenshot 2025-09-16 191257.png" alt="AFRIBENKI - Empowering Africa's Financial Growth" width = "1000" height="150">
 </p>
 
 🚀 AfriBenki: Your Friendly AI Buddy for Saving and Investing in Africa!
